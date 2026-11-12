@@ -37,7 +37,7 @@ html {
 body {
   background-color: #f5f1e4;
   color: #2c2e2a;
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0;
   padding: 0;
 }

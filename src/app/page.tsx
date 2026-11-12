@@ -7,67 +7,61 @@ import Lenis from "lenis";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const assetPathPrefix = "/figma";
-const imgImage = `${assetPathPrefix}/a184e.png`;
-const imgImage1 = `${assetPathPrefix}/1db26.png`;
-const imgImage2 = `${assetPathPrefix}/18283.png`;
-const imgImage3 = `${assetPathPrefix}/21eda.png`;
-const imgImage4 = `${assetPathPrefix}/0f547.png`;
-const imgImage5 = `${assetPathPrefix}/aba56.png`;
-const imgImage6 = `${assetPathPrefix}/3e449.png`;
-const imgImage7 = `${assetPathPrefix}/588be.png`;
-const imgImage8 = `${assetPathPrefix}/a5001.png`;
-const imgImage9 = `${assetPathPrefix}/28534.png`;
-const imgImage10 = `${assetPathPrefix}/5e76c.png`;
-const imgImage11 = `${assetPathPrefix}/d866f.png`;
-const imgImage12 = `${assetPathPrefix}/610b2.png`;
-const imgSvg = `${assetPathPrefix}/6b7ac.svg`;
-const imgBackground = `${assetPathPrefix}/4a430.svg`;
-const imgSvg1 = `${assetPathPrefix}/761bc.svg`;
-const imgHeroBackgroundIllustrationSvg = `${assetPathPrefix}/07a8f.svg`;
-const imgClipPathGroup = `${assetPathPrefix}/e99cb.svg`;
-const imgCHomepageTimeline = `${assetPathPrefix}/e1f21.svg`;
-const imgClipPathGroup1 = `${assetPathPrefix}/c980e.svg`;
-const imgFolderSvg = `${assetPathPrefix}/9c440.svg`;
-const imgFolderShapeSvg = `${assetPathPrefix}/7a44a.svg`;
-const imgPlane2Svg = `${assetPathPrefix}/a2993.svg`;
-const imgSheetSvg = `${assetPathPrefix}/a02d7.svg`;
-const imgComposerShape2Svg = `${assetPathPrefix}/50295.svg`;
-const imgClipPathGroup2 = `${assetPathPrefix}/a3898.svg`;
-const imgClipPathGroup3 = `${assetPathPrefix}/b8ac4.svg`;
-const imgTrumperShapeSvg = `${assetPathPrefix}/df022.svg`;
-const imgGamerShapeSvg = `${assetPathPrefix}/d5997.svg`;
-const imgJoystickShapeSvg = `${assetPathPrefix}/fffa8.svg`;
-const imgSoccerCircleSvg = `${assetPathPrefix}/0b181.svg`;
-const imgSoccerShape1Svg = `${assetPathPrefix}/54f06.svg`;
-const imgSoccerShape2Svg = `${assetPathPrefix}/5abbb.svg`;
-const imgSoccerShape3Svg = `${assetPathPrefix}/a52bc.svg`;
-const imgSoccerShape4Svg = `${assetPathPrefix}/79eb7.svg`;
-const imgSoccerTraceSvg = `${assetPathPrefix}/5d506.svg`;
-const imgSoccerCircle2Svg = `${assetPathPrefix}/57ddb.svg`;
-const imgTimelineEndCloud1Svg = `${assetPathPrefix}/56d85.svg`;
-const imgTimelineEndCloud2Svg = `${assetPathPrefix}/03e69.svg`;
-const imgTimelineEndCloud3Svg = `${assetPathPrefix}/b98c3.svg`;
-const imgTimelineEndCloud4Svg = `${assetPathPrefix}/52d06.svg`;
-const imgTimelineEndCloud5Svg = `${assetPathPrefix}/08e6f.svg`;
-const imgTimelineEndGreenBackSvg = `${assetPathPrefix}/0dca5.svg`;
-const imgTimelineEndGreenMiddleSvg = `${assetPathPrefix}/f9f03.svg`;
-const imgTimelineEndGreenFrontSvg = `${assetPathPrefix}/99a38.svg`;
-const imgClockShapeSvg = `${assetPathPrefix}/fb7d6.svg`;
-const imgPlane1Svg = `${assetPathPrefix}/891ca.svg`;
-const imgPlaneTraceSvg = `${assetPathPrefix}/d9a65.svg`;
-const imgComposerShapeSvg = `${assetPathPrefix}/22db9.svg`;
-const imgClipPathGroup4 = `${assetPathPrefix}/39ac6.svg`;
-const imgBackground1 = `${assetPathPrefix}/db1c6.svg`;
-const imgSvg2 = `${assetPathPrefix}/ca2ba.svg`;
-const imgSvg3 = `${assetPathPrefix}/62e87.svg`;
-const imgSvg4 = `${assetPathPrefix}/b2ff8.svg`;
-const imgSvg5 = `${assetPathPrefix}/046de.svg`;
-const imgSvg6 = `${assetPathPrefix}/725c8.svg`;
-const imgBackground2 = `${assetPathPrefix}/d530d.svg`;
-const imgLayer1 = `${assetPathPrefix}/0d4e4.svg`;
+const imgCalloutChar = `${assetPathPrefix}/a184e.png`;
+const imgHeroChars = `${assetPathPrefix}/1db26.png`;
+const imgChar2 = `${assetPathPrefix}/18283.png`;
+const imgChar3 = `${assetPathPrefix}/21eda.png`;
+const imgChar4 = `${assetPathPrefix}/0f547.png`;
+const imgEndExplorer = `${assetPathPrefix}/aba56.png`;
+const imgEndCyclist = `${assetPathPrefix}/3e449.png`;
+const imgEndRunner = `${assetPathPrefix}/588be.png`;
+const imgChar8 = `${assetPathPrefix}/a5001.png`;
+const imgChar9 = `${assetPathPrefix}/28534.png`;
+const imgChar10 = `${assetPathPrefix}/5e76c.png`;
+const imgChar11 = `${assetPathPrefix}/d866f.png`;
+const imgChar12 = `${assetPathPrefix}/610b2.png`;
 
-const DESIGN_WIDTH = 1920;
-const DESIGN_HEIGHT = 13069.056;
+const imgArrowRight = `${assetPathPrefix}/6b7ac.svg`;
+const imgWaveIndigo = `${assetPathPrefix}/4a430.svg`;
+const imgHeroClouds = `${assetPathPrefix}/07a8f.svg`;
+const imgMusicNote1 = `${assetPathPrefix}/e99cb.svg`;
+const imgClock = `${assetPathPrefix}/c980e.svg`;
+const imgFolder = `${assetPathPrefix}/9c440.svg`;
+const imgFolderShape = `${assetPathPrefix}/7a44a.svg`;
+const imgPlane2 = `${assetPathPrefix}/a2993.svg`;
+const imgSheet = `${assetPathPrefix}/a02d7.svg`;
+const imgComposerShape2 = `${assetPathPrefix}/50295.svg`;
+const imgMusicNote2 = `${assetPathPrefix}/a3898.svg`;
+const imgMusicNote3 = `${assetPathPrefix}/b8ac4.svg`;
+const imgTrumpetShape = `${assetPathPrefix}/df022.svg`;
+const imgGamerShape = `${assetPathPrefix}/d5997.svg`;
+const imgJoystickShape = `${assetPathPrefix}/fffa8.svg`;
+const imgSoccerCircle = `${assetPathPrefix}/0b181.svg`;
+const imgSoccerShape1 = `${assetPathPrefix}/54f06.svg`;
+const imgSoccerShape2 = `${assetPathPrefix}/5abbb.svg`;
+const imgSoccerShape3 = `${assetPathPrefix}/a52bc.svg`;
+const imgSoccerShape4 = `${assetPathPrefix}/79eb7.svg`;
+const imgSoccerTrace = `${assetPathPrefix}/5d506.svg`;
+const imgSoccerCircle2 = `${assetPathPrefix}/57ddb.svg`;
+const imgCloud1 = `${assetPathPrefix}/56d85.svg`;
+const imgCloud2 = `${assetPathPrefix}/03e69.svg`;
+const imgCloud3 = `${assetPathPrefix}/b98c3.svg`;
+const imgCloud4 = `${assetPathPrefix}/52d06.svg`;
+const imgCloud5 = `${assetPathPrefix}/08e6f.svg`;
+const imgHillsBack = `${assetPathPrefix}/0dca5.svg`;
+const imgHillsMiddle = `${assetPathPrefix}/f9f03.svg`;
+const imgHillsFront = `${assetPathPrefix}/99a38.svg`;
+const imgClockShape = `${assetPathPrefix}/fb7d6.svg`;
+const imgPlane1 = `${assetPathPrefix}/891ca.svg`;
+const imgPlaneTrace = `${assetPathPrefix}/d9a65.svg`;
+const imgComposerShape = `${assetPathPrefix}/22db9.svg`;
+const imgJoystick = `${assetPathPrefix}/39ac6.svg`;
+const imgWaveLilac = `${assetPathPrefix}/db1c6.svg`;
+const imgIconGo = `${assetPathPrefix}/ca2ba.svg`;
+const imgIconPro = `${assetPathPrefix}/62e87.svg`;
+const imgIconMax = `${assetPathPrefix}/b2ff8.svg`;
+const imgChevronDown = `${assetPathPrefix}/046de.svg`;
+const imgMenuEquals = `${assetPathPrefix}/725c8.svg`;
 
 function renderMaliWords(text: string) {
   const words = text.split(" ");
@@ -85,31 +79,23 @@ function renderMaliWords(text: string) {
 
 export default function HomePage() {
   const rootRef = useRef<HTMLDivElement>(null);
+  const timelineSectionRef = useRef<HTMLDivElement>(null);
+  const svgDrawPathRef = useRef<SVGPathElement>(null);
   const lenisRef = useRef<Lenis | null>(null);
-  const [canvasScale, setCanvasScale] = useState<number>(1);
-  const [scaleReady, setScaleReady] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    const updateScale = () => {
-      const vw = document.documentElement.clientWidth || window.innerWidth;
-      const nextScale = vw / DESIGN_WIDTH;
-      setCanvasScale(nextScale);
-      setScaleReady(true);
+    const checkViewport = () => {
+      setIsMobile(window.innerWidth < 768);
     };
-    updateScale();
-    window.addEventListener("resize", updateScale);
-    return () => window.removeEventListener("resize", updateScale);
+    checkViewport();
+    window.addEventListener("resize", checkViewport);
+    return () => window.removeEventListener("resize", checkViewport);
   }, []);
 
   useEffect(() => {
-    if (!scaleReady) return;
-
     gsap.registerPlugin(ScrollTrigger);
-
-    const docTop = (el: HTMLElement) =>
-      el.getBoundingClientRect().top + window.scrollY;
-    const docBottom = (el: HTMLElement) =>
-      el.getBoundingClientRect().bottom + window.scrollY;
 
     const lenis = new Lenis({
       duration: 1.15,
@@ -129,7 +115,30 @@ export default function HomePage() {
     const observers: IntersectionObserver[] = [];
 
     const ctx = gsap.context(() => {
-      // 1. Card Stack Scale Effect on Major Rounded Blocks (scale: 0.96 as next section overlaps)
+      // 1. SVG DRAW PATH ANIMATION ON SCROLL (MindMarket Blue S-Line)
+      const path = svgDrawPathRef.current;
+      const timelineEl = timelineSectionRef.current;
+      if (path && timelineEl) {
+        const length = path.getTotalLength();
+        gsap.set(path, {
+          strokeDasharray: length,
+          strokeDashoffset: length,
+        });
+
+        gsap.to(path, {
+          strokeDashoffset: 0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: timelineEl,
+            start: "top 68%",
+            end: "bottom 82%",
+            scrub: 0.5,
+            invalidateOnRefresh: true,
+          },
+        });
+      }
+
+      // 2. Card Stack Scale Effect on Major Rounded Containers (scale: 0.96 as next section overlaps)
       const stackBlocks = gsap.utils.toArray<HTMLElement>(".card-stack-block");
       stackBlocks.forEach((block) => {
         const overlay = block.querySelector<HTMLElement>(".card-stack-overlay");
@@ -141,8 +150,8 @@ export default function HomePage() {
             ease: "none",
             scrollTrigger: {
               trigger: block,
-              start: () => Math.max(0, docBottom(block) - window.innerHeight),
-              end: () => Math.max(1, docBottom(block)),
+              start: "bottom bottom",
+              end: "bottom top",
               scrub: 0.65,
               invalidateOnRefresh: true,
             },
@@ -154,12 +163,12 @@ export default function HomePage() {
             overlay,
             { opacity: 0 },
             {
-              opacity: 0.18,
+              opacity: 0.16,
               ease: "none",
               scrollTrigger: {
                 trigger: block,
-                start: () => Math.max(0, docBottom(block) - window.innerHeight),
-                end: () => Math.max(1, docBottom(block)),
+                start: "bottom bottom",
+                end: "bottom top",
                 scrub: 0.65,
                 invalidateOnRefresh: true,
               },
@@ -168,39 +177,19 @@ export default function HomePage() {
         }
       });
 
-      // Next section subtle upward overlap as it enters
-      const overlapSections = gsap.utils.toArray<HTMLElement>(".card-stack-overlap");
-      overlapSections.forEach((section) => {
-        gsap.fromTo(
-          section,
-          { y: 42 },
-          {
-            y: 0,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: section,
-              start: () => Math.max(0, docTop(section) - window.innerHeight),
-              end: () => Math.max(1, docTop(section) - window.innerHeight * 0.35),
-              scrub: 0.65,
-              invalidateOnRefresh: true,
-            },
-          }
-        );
-      });
-
-      // 2. Multi-layer Parallax & Continuous Float on Central Hero Illustration
+      // 3. Multi-layer Parallax & Continuous Float on Central Hero Illustration
       const heroStage = document.querySelector<HTMLElement>(".hero-central-stage");
       if (heroStage) {
         gsap.fromTo(
           ".hero-central-characters",
           { yPercent: 0 },
           {
-            yPercent: -12,
+            yPercent: -10,
             ease: "none",
             scrollTrigger: {
               trigger: heroStage,
-              start: 0,
-              end: () => Math.max(1, docBottom(heroStage)),
+              start: "top bottom",
+              end: "bottom top",
               scrub: 0.7,
               invalidateOnRefresh: true,
             },
@@ -211,39 +200,22 @@ export default function HomePage() {
           ".hero-central-bg-clouds",
           { yPercent: 0 },
           {
-            yPercent: -22,
+            yPercent: -20,
             ease: "none",
             scrollTrigger: {
               trigger: heroStage,
-              start: 0,
-              end: () => Math.max(1, docBottom(heroStage)),
+              start: "top bottom",
+              end: "bottom top",
               scrub: 0.5,
-              invalidateOnRefresh: true,
-            },
-          }
-        );
-
-        gsap.fromTo(
-          ".hero-central-blob",
-          { yPercent: 0 },
-          {
-            yPercent: -5,
-            ease: "none",
-            scrollTrigger: {
-              trigger: heroStage,
-              start: 0,
-              end: () => Math.max(1, docBottom(heroStage)),
-              scrub: 0.9,
               invalidateOnRefresh: true,
             },
           }
         );
       }
 
-      // Continuous organic float on the central hero characters and clouds
       gsap.to(".hero-central-float", {
-        y: -14,
-        rotation: -0.8,
+        y: -12,
+        rotation: -0.7,
         duration: 3.1,
         ease: "sine.inOut",
         yoyo: true,
@@ -251,18 +223,18 @@ export default function HomePage() {
       });
 
       gsap.to(".hero-clouds-float", {
-        y: 9,
-        x: 6,
+        y: 8,
+        x: 5,
         duration: 4.2,
         ease: "sine.inOut",
         yoyo: true,
         repeat: -1,
       });
 
-      // 3. Multi-layer Parallax & Continuous Float on Secondary Illustrations and Decorative Vectors
+      // 4. Parallax & Continuous Float on Secondary Illustrations and Decorative Vectors
       const secondaryChars = gsap.utils.toArray<HTMLElement>(".parallax-character");
       secondaryChars.forEach((el, idx) => {
-        const shift = idx % 2 === 0 ? 36 : 52;
+        const shift = idx % 2 === 0 ? 28 : 40;
         gsap.fromTo(
           el,
           { y: shift },
@@ -271,8 +243,8 @@ export default function HomePage() {
             ease: "none",
             scrollTrigger: {
               trigger: el,
-              start: () => Math.max(0, docTop(el) - window.innerHeight),
-              end: () => Math.max(1, docBottom(el)),
+              start: "top bottom",
+              end: "bottom top",
               scrub: 0.75,
               invalidateOnRefresh: true,
             },
@@ -282,7 +254,7 @@ export default function HomePage() {
         const innerImg = el.querySelector("img");
         if (innerImg) {
           gsap.to(innerImg, {
-            y: idx % 2 === 0 ? -10 : 10,
+            y: idx % 2 === 0 ? -9 : 9,
             duration: 2.7 + (idx % 4) * 0.35,
             ease: "sine.inOut",
             yoyo: true,
@@ -293,7 +265,7 @@ export default function HomePage() {
 
       const decorVectors = gsap.utils.toArray<HTMLElement>(".parallax-decor");
       decorVectors.forEach((el, idx) => {
-        const speed = idx % 2 === 0 ? -16 : -11;
+        const speed = idx % 2 === 0 ? -15 : -10;
         gsap.fromTo(
           el,
           { yPercent: 10 },
@@ -302,8 +274,8 @@ export default function HomePage() {
             ease: "none",
             scrollTrigger: {
               trigger: el,
-              start: () => Math.max(0, docTop(el) - window.innerHeight),
-              end: () => Math.max(1, docBottom(el)),
+              start: "top bottom",
+              end: "bottom top",
               scrub: 0.55,
               invalidateOnRefresh: true,
             },
@@ -311,30 +283,8 @@ export default function HomePage() {
         );
       });
 
-      // Pricing plan cards stack scale when next card approaches
-      const planCards = gsap.utils.toArray<HTMLElement>(".plan-stack-card");
-      planCards.forEach((card, index) => {
-        if (index < planCards.length - 1) {
-          const nextCard = planCards[index + 1];
-          gsap.to(card, {
-            scale: 0.96,
-            transformOrigin: "center top",
-            ease: "none",
-            scrollTrigger: {
-              trigger: nextCard,
-              start: () => Math.max(0, docTop(nextCard) - window.innerHeight * 0.8),
-              end: () => Math.max(1, docTop(nextCard) - window.innerHeight * 0.3),
-              scrub: 0.6,
-              invalidateOnRefresh: true,
-            },
-          });
-        }
-      });
-
-      // Timeline feature cards & Pricing plan cards organic entrance via IntersectionObserver
-      const entranceCards = gsap.utils.toArray<HTMLElement>(
-        ".timeline-feature-card, .plan-stack-card"
-      );
+      // 5. Timeline Feature Cards Organic Entrance
+      const entranceCards = gsap.utils.toArray<HTMLElement>(".timeline-feature-card");
       if (typeof IntersectionObserver !== "undefined" && entranceCards.length) {
         const cardObserver = new IntersectionObserver(
           (entries) => {
@@ -343,11 +293,11 @@ export default function HomePage() {
               if (entry.isIntersecting) {
                 gsap.fromTo(
                   card,
-                  { y: 42, opacity: 0.85 },
+                  { y: 36, opacity: 0.85 },
                   {
                     y: 0,
                     opacity: 1,
-                    duration: 0.8,
+                    duration: 0.75,
                     ease: "back.out(1.2)",
                     overwrite: "auto",
                   }
@@ -355,13 +305,13 @@ export default function HomePage() {
               }
             });
           },
-          { threshold: 0.08 }
+          { threshold: 0.1 }
         );
         entranceCards.forEach((c) => cardObserver.observe(c));
         observers.push(cardObserver);
       }
 
-      // 4. Organic Mali Headlines Word-by-Word Reveal (elastic bounce back.out(1.4))
+      // 6. Organic Mali Headlines Word-by-Word Reveal (elastic bounce back.out(1.4))
       const maliHeadings = gsap.utils.toArray<HTMLElement>(".mali-heading-reveal");
       if (typeof IntersectionObserver !== "undefined" && maliHeadings.length) {
         const headingObserver = new IntersectionObserver(
@@ -408,18 +358,21 @@ export default function HomePage() {
       lenis.destroy();
       lenisRef.current = null;
     };
-  }, [scaleReady, canvasScale]);
+  }, [isMobile]);
 
-  const scrollToY = (designY: number) => {
-    const targetY = designY * canvasScale;
+  const scrollToSection = (id: string) => {
+    setMobileMenuOpen(false);
+    const el = document.getElementById(id);
+    if (!el) return;
     if (lenisRef.current) {
-      lenisRef.current.scrollTo(targetY, { duration: 1.25 });
+      lenisRef.current.scrollTo(el, { offset: -90, duration: 1.2 });
     } else {
-      window.scrollTo({ top: targetY, behavior: "smooth" });
+      el.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const openQuoteWhatsApp = (planName?: string, price?: string) => {
+    setMobileMenuOpen(false);
     const url = planName
       ? buildWhatsAppLink({
           type: "package",
@@ -433,3062 +386,1106 @@ export default function HomePage() {
   };
 
   return (
-    <div
-      ref={rootRef}
-      className="relative w-full overflow-hidden bg-[#f5f1e4] select-none md:select-auto"
-      style={{ height: `${DESIGN_HEIGHT * canvasScale}px` }}
-    >
-      {/* Fixed Floating Top Navigation Bar scaled to viewport */}
-      <div
-        className="fixed left-0 top-0 z-50 pointer-events-none"
-        style={{
-          width: `${DESIGN_WIDTH}px`,
-          transform: `scale(${canvasScale})`,
-          transformOrigin: "top left",
-        }}
-      >
-        <div
-          className="absolute content-stretch flex gap-[20px] items-start left-[242.33px] right-[242.33px] top-[17px] pointer-events-auto"
-          data-node-id="2:802"
-          data-name="Nav"
-        >
-          <div
-            className="bg-white content-stretch flex flex-[1_0_0] h-[68px] items-center justify-between min-w-px pl-[17px] pr-[10.63px] relative rounded-[10px] shadow-[0_8px_30px_rgba(44,46,42,0.08)]"
-            data-node-id="2:803"
-            data-name="Background"
+    <div ref={rootRef} className="relative w-full bg-[#f5f1e4] text-[#2c2e2a]">
+      {/* =====================================================================
+          FLOATING TOP NAVIGATION BAR (Mobile Single Pill / Desktop Full Bar)
+         ===================================================================== */}
+      <header className="fixed top-3 md:top-[17px] left-0 right-0 z-50 pointer-events-none">
+        <div className="w-[92%] md:w-[90%] max-w-[1435px] mx-auto flex items-center gap-[16px] md:gap-[20px] pointer-events-auto">
+          {/* Main White Pill */}
+          <nav
+            aria-label="Navegación principal"
+            className="bg-white flex-1 h-[62px] md:h-[68px] rounded-[12px] md:rounded-[10px] pl-[18px] pr-[10.6px] flex items-center justify-between shadow-[0_8px_30px_rgba(44,46,42,0.08)]"
           >
             <button
               type="button"
-              onClick={() => scrollToY(0)}
-              className="content-stretch flex items-center relative shrink-0 text-left cursor-pointer"
-              data-node-id="2:804"
-              data-name="Link"
+              onClick={() => scrollToSection("hero")}
+              className="flex items-center text-left cursor-pointer"
             >
-              <div
-                className="content-stretch flex flex-col items-start relative shrink-0"
-                data-node-id="2:815"
-                data-name="Container"
+              <span className="font-['Mali:Regular'] font-mali text-[#2c2e2a] text-[30px] md:text-[35px] leading-none tracking-tight">
+                Webify
+              </span>
+            </button>
+
+            {/* Desktop Menu Links + Circular Button */}
+            <div className="hidden md:flex items-center gap-[4px] h-full">
+              <button
+                type="button"
+                onClick={() => scrollToSection("como-funciona")}
+                className="mindmarket-nav-item relative flex items-center justify-center min-h-[46.75px] px-[17px] rounded-[50px]"
               >
-                <div
-                  className="h-[20.34px] relative shrink-0 w-[136px]"
-                  data-node-id="2:816"
-                  data-name="SVG"
+                <span className="nav-pill-bg absolute inset-[4.5px_10px] bg-[#f5f1e4] opacity-0 rounded-[50px]" />
+                <span className="relative font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[17px] lg:text-[18.1px] tracking-[-0.72px] whitespace-nowrap">
+                  Cómo funciona
+                </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => scrollToSection("rubros")}
+                className="mindmarket-nav-item relative flex items-center gap-[8px] justify-center min-h-[46.75px] px-[17px] rounded-[50px]"
+              >
+                <span className="nav-pill-bg absolute inset-[4.5px_12px] bg-[#f5f1e4] opacity-0 rounded-[50px]" />
+                <span className="relative font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[17px] lg:text-[18.1px] tracking-[-0.72px] whitespace-nowrap">
+                  Rubros
+                </span>
+                <img
+                  alt=""
+                  src={imgChevronDown}
+                  className="nav-chevron relative size-[10px]"
+                />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => scrollToSection("panel-movil")}
+                className="mindmarket-nav-item relative flex items-center gap-[8px] justify-center min-h-[46.75px] px-[17px] rounded-[50px]"
+              >
+                <span className="nav-pill-bg absolute inset-[4.5px_11px] bg-[#f5f1e4] opacity-0 rounded-[50px]" />
+                <span className="relative font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[17px] lg:text-[18.1px] tracking-[-0.72px] whitespace-nowrap">
+                  Panel Móvil
+                </span>
+                <img
+                  alt=""
+                  src={imgChevronDown}
+                  className="nav-chevron relative size-[10px]"
+                />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => scrollToSection("planes")}
+                className="mindmarket-nav-item relative flex items-center gap-[8px] justify-center min-h-[46.75px] px-[17px] rounded-[50px]"
+              >
+                <span className="nav-pill-bg absolute inset-[4.5px_12px] bg-[#f5f1e4] opacity-0 rounded-[50px]" />
+                <span className="relative font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[17px] lg:text-[18.1px] tracking-[-0.72px] whitespace-nowrap">
+                  Planes
+                </span>
+                <img
+                  alt=""
+                  src={imgChevronDown}
+                  className="nav-chevron relative size-[10px]"
+                />
+              </button>
+
+              <div className="pl-[12px] flex items-center">
+                <button
+                  type="button"
+                  aria-label="Ir al contacto"
+                  onClick={() => scrollToSection("contacto")}
+                  className="mindmarket-pill-btn relative flex items-center justify-center size-[42.5px]"
                 >
-                  <p
-                    className="[word-break:break-word] absolute font-['Mali:Regular'] font-mali leading-[normal] left-0 not-italic text-[#2c2e2a] text-[35px] top-[-12px] whitespace-nowrap"
-                    data-node-id="5:2"
-                  >
-                    Webify
-                  </p>
+                  <span className="pill-circle absolute inset-0 bg-[#626cd4] rounded-full" />
+                  <img
+                    alt=""
+                    src={imgMenuEquals}
+                    className="relative size-[22px]"
+                  />
+                </button>
+              </div>
+            </div>
+
+            {/* Mobile Circular Menu Button (Right side of single pill) */}
+            <button
+              type="button"
+              aria-label="Abrir menú"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="md:hidden mindmarket-pill-btn relative flex items-center justify-center size-[42.5px]"
+            >
+              <span className="pill-circle absolute inset-0 bg-[#626cd4] rounded-full" />
+              <img
+                alt=""
+                src={imgMenuEquals}
+                className="relative size-[22px]"
+              />
+            </button>
+          </nav>
+
+          {/* Desktop Separate "Cotizar mi web" Pill Button */}
+          <button
+            type="button"
+            onClick={() => openQuoteWhatsApp()}
+            className="hidden md:flex mindmarket-pill-btn bg-white h-[68px] px-[14px] rounded-[10px] items-center gap-[10px] shadow-[0_8px_30px_rgba(44,46,42,0.08)] shrink-0"
+          >
+            <span className="font-['Inter:Medium'] font-inter font-medium text-[18.1px] text-black px-[8px] whitespace-nowrap">
+              Cotizar mi web
+            </span>
+            <span className="pill-circle bg-[#626cd4] rounded-full size-[40px] flex items-center justify-center shrink-0">
+              <img
+                alt=""
+                src={imgArrowRight}
+                className="pill-arrow size-[21.25px]"
+              />
+            </span>
+          </button>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden w-[92%] mx-auto mt-2 bg-white rounded-[16px] p-5 shadow-[0_16px_40px_rgba(44,46,42,0.16)] flex flex-col gap-3 pointer-events-auto">
+            <button
+              type="button"
+              onClick={() => scrollToSection("como-funciona")}
+              className="text-left font-inter font-medium text-[19px] py-2 px-3 rounded-lg hover:bg-[#f5f1e4]"
+            >
+              Cómo funciona
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection("panel-movil")}
+              className="text-left font-inter font-medium text-[19px] py-2 px-3 rounded-lg hover:bg-[#f5f1e4]"
+            >
+              Panel Móvil
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection("rubros")}
+              className="text-left font-inter font-medium text-[19px] py-2 px-3 rounded-lg hover:bg-[#f5f1e4]"
+            >
+              Rubros
+            </button>
+            <button
+              type="button"
+              onClick={() => scrollToSection("planes")}
+              className="text-left font-inter font-medium text-[19px] py-2 px-3 rounded-lg hover:bg-[#f5f1e4]"
+            >
+              Planes
+            </button>
+            <button
+              type="button"
+              onClick={() => openQuoteWhatsApp()}
+              className="mindmarket-pill-btn mt-1 bg-[#626cd4] text-white h-[56px] px-5 rounded-[12px] flex items-center justify-between font-inter font-medium text-[18px]"
+            >
+              <span>Cotizar mi web</span>
+              <span className="pill-circle bg-white rounded-full size-[36px] flex items-center justify-center">
+                <img
+                  alt=""
+                  src={imgArrowRight}
+                  className="pill-arrow size-[18px]"
+                />
+              </span>
+            </button>
+          </div>
+        )}
+      </header>
+
+      {/* =====================================================================
+          BLOCK 1: HERO INDIGO ("Diseño web hecho a medida")
+         ===================================================================== */}
+      <section
+        id="hero"
+        className="card-stack-block relative w-full bg-[#626cd4] pt-[128px] md:pt-[200px] lg:pt-[235px] pb-[180px] md:pb-[340px] lg:pb-[420px] px-4 md:px-10"
+      >
+        <div className="card-stack-overlay absolute inset-0 bg-[#2c2e2a] opacity-0 pointer-events-none" />
+
+        <div className="relative z-10 max-w-[1503px] mx-auto flex flex-col items-center gap-[24px] md:gap-[44px]">
+          <h1 className="mali-heading-reveal font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[52px] sm:text-[76px] md:text-[120px] lg:text-[156px] xl:text-[186.2px] leading-[1.02] md:leading-[0.95] tracking-[-0.02em] text-center">
+            <span className="block">{renderMaliWords("Diseño web")}</span>
+            <span className="block">{renderMaliWords("hecho a medida")}</span>
+          </h1>
+
+          {/* Subtitle in Pure White (#FFFFFF) for high contrast over Indigo */}
+          <h2 className="font-['Inter:Medium'] font-inter font-medium text-[#FFFFFF] text-[19px] sm:text-[22px] md:text-[27px] lg:text-[29.8px] leading-[1.3] tracking-[-0.04em] text-center max-w-[92%] md:max-w-[900px]">
+            De Instagram a tu WhatsApp, sin plantillas de IA
+          </h2>
+        </div>
+      </section>
+
+      {/* =====================================================================
+          BLOCK 2: CREAM SECTION + HERO CHARACTERS OVERLAP + ANIMATED BLUE S-PATH
+         ===================================================================== */}
+      <section className="card-stack-block relative z-10 w-full bg-[#f5f1e4] rounded-t-[36px] md:rounded-t-[50px] -mt-[40px] md:-mt-[60px] pt-[20px] md:pt-[80px] pb-[80px] md:pb-[120px]">
+        {/* Central Overlapping Hero Illustration (Bridging Hero Indigo & Cream Section cleanly) */}
+        <div className="hero-central-stage relative md:absolute md:-top-[330px] lg:-top-[400px] md:right-[2%] lg:right-[6%] xl:right-[10%] z-10 w-[92%] sm:w-[80%] md:w-[520px] lg:w-[680px] xl:w-[820px] mx-auto -mt-[155px] sm:-mt-[200px] md:mt-0 pointer-events-none select-none">
+          {/* Background Clouds */}
+          <div className="hero-central-bg-clouds absolute -top-[4%] left-0 right-0 flex justify-center">
+            <img
+              alt=""
+              src={imgHeroClouds}
+              className="hero-clouds-float w-[95%] max-w-[780px] h-auto"
+            />
+          </div>
+          {/* 3 Hero Characters with Transparent Background (Zero static blue blob below them) */}
+          <div className="hero-central-characters relative z-10">
+            <img
+              alt="Ilustración central Webify"
+              src={imgHeroChars}
+              className="hero-central-float w-full h-auto block"
+            />
+          </div>
+        </div>
+
+        {/* Intro Paragraph & "Ver planes desde $150.000" Pill CTA (Protected z-20 so characters/blob never overlap it) */}
+        <div className="relative z-20 w-[92%] max-w-[1640px] mx-auto pt-4 md:pt-[24px] lg:pt-[40px] pb-10 md:pb-[140px] lg:pb-[180px]">
+          <div className="max-w-[560px] lg:max-w-[650px] flex flex-col items-start gap-[28px] md:gap-[38px]">
+            <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[22px] sm:text-[25px] md:text-[28px] lg:text-[29.8px] leading-[1.28] md:leading-[35.7px] tracking-[-0.04em]">
+              En Webify diseñamos páginas con carácter propio para estudios de
+              uñas, spas, barberías y restaurantes en Colombia. Tus clientes
+              eligen servicios o platos y tú recibes el pedido o la cita lista
+              en tu WhatsApp.
+            </p>
+
+            <button
+              type="button"
+              onClick={() => scrollToSection("planes")}
+              className="mindmarket-pill-btn bg-white min-h-[60px] md:min-h-[63.75px] p-[11.6px] rounded-[10px] flex items-center gap-[10px] shadow-[0_8px_24px_rgba(44,46,42,0.06)]"
+            >
+              <span className="font-['Inter:Medium'] font-inter font-medium text-[17px] md:text-[18.1px] text-black px-[10.6px] whitespace-nowrap">
+                Ver planes desde $150.000
+              </span>
+              <span className="pill-circle bg-[#626cd4] rounded-full size-[42.5px] flex items-center justify-center shrink-0">
+                <img
+                  alt=""
+                  src={imgArrowRight}
+                  className="pill-arrow size-[21.25px]"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+
+        {/* ===================================================================
+            TIMELINE STAGE WITH ANIMATED BLUE S-CURVE SVG DRAW PATH
+           =================================================================== */}
+        <div
+          ref={timelineSectionRef}
+          className="relative w-full overflow-x-clip pt-4 pb-[300px] md:pb-[520px] lg:pb-[640px]"
+        >
+          {/* Animated Continuous S-Shaped SVG Draw Path in #4F52C6 */}
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 1920 4400"
+            preserveAspectRatio="none"
+            className="pointer-events-none absolute inset-0 w-full h-full z-[1] overflow-visible"
+          >
+            <path
+              ref={svgDrawPathRef}
+              d="M 1180 -60 C 1480 180, 1560 540, 1220 820 C 860 1120, 340 1280, 520 1720 C 700 2160, 1460 2260, 1080 2780 C 700 3300, 1520 3480, 1260 3920 C 1060 4220, 880 4320, 960 4420"
+              fill="none"
+              stroke="#4F52C6"
+              strokeWidth={isMobile ? "110" : "180"}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+
+          {/* Background Decorative Dashed Traces (Desktop) */}
+          <img
+            alt=""
+            src={imgClockShape}
+            className="hidden md:block pointer-events-none absolute top-[1%] left-[7%] w-[28%] max-w-[520px] z-[2]"
+          />
+          <img
+            alt=""
+            src={imgPlaneTrace}
+            className="hidden md:block pointer-events-none absolute top-[7%] left-[22%] w-[22%] max-w-[420px] z-[2]"
+          />
+          <img
+            alt=""
+            src={imgFolderShape}
+            className="hidden md:block pointer-events-none absolute top-[16%] left-[18%] w-[24%] max-w-[450px] z-[2]"
+          />
+          <img
+            alt=""
+            src={imgComposerShape}
+            className="hidden md:block pointer-events-none absolute top-[26%] right-[8%] w-[36%] max-w-[680px] z-[2]"
+          />
+          <img
+            alt=""
+            src={imgComposerShape2}
+            className="hidden md:block pointer-events-none absolute top-[29%] right-[8%] w-[36%] max-w-[680px] z-[2]"
+          />
+          <img
+            alt=""
+            src={imgSoccerTrace}
+            className="hidden md:block pointer-events-none absolute top-[72%] left-[32%] w-[18%] max-w-[340px] z-[2]"
+          />
+
+          {/* Timeline Foreground Rows (Cards + Companion Characters + Floating Vectors) */}
+          <div className="relative z-[10] max-w-[1680px] mx-auto flex flex-col gap-[72px] md:gap-[160px] lg:gap-[210px]">
+            {/* ---------------------------------------------------------------
+                ROW 1: "Catálogo y agenda a WhatsApp"
+               --------------------------------------------------------------- */}
+            <div
+              id="como-funciona"
+              className="w-[92%] md:w-full mx-auto grid grid-cols-1 md:grid-cols-12 items-center gap-8 md:gap-10"
+            >
+              {/* Left Character & Clock/Plane Decor */}
+              <div className="md:col-span-5 relative flex items-center justify-center order-2 md:order-1">
+                <div className="parallax-decor hidden md:block absolute -top-12 left-4 w-[130px] lg:w-[170px]">
+                  <img alt="" src={imgClock} className="w-full h-auto" />
+                </div>
+                <div className="parallax-decor hidden md:block absolute top-6 right-4 w-[90px] lg:w-[115px] rotate-[10deg]">
+                  <img alt="" src={imgPlane1} className="w-full h-auto" />
+                </div>
+                <div className="parallax-character w-[82%] sm:w-[70%] md:w-full max-w-[560px]">
+                  <img
+                    alt="Catálogo y agenda Webify"
+                    src={imgChar9}
+                    className="w-full h-auto block"
+                  />
                 </div>
               </div>
-            </button>
-            <div
-              className="content-stretch flex gap-[4.2px] h-full items-start relative shrink-0"
-              data-node-id="2:818"
-              data-name="List - Main items (in desktop bar menu)"
-            >
-              <div
-                className="content-stretch flex h-full items-center relative shrink-0"
-                data-node-id="2:819"
-                data-name="Item"
-              >
-                <button
-                  type="button"
-                  onClick={() => scrollToY(2400)}
-                  className="mindmarket-nav-item content-stretch flex items-center justify-center min-h-[46.75px] pb-[12.1px] pt-[12.07px] px-[17px] relative rounded-[50px] shrink-0"
-                  data-node-id="2:820"
-                  data-name="Link"
-                >
-                  <div
-                    className="absolute inset-[4.67px_11.89px_4.68px_10.35px] flex items-center justify-center"
-                    data-node-id="2:821"
-                  >
-                    <div
-                      className="nav-pill-bg bg-[#f5f1e4] opacity-0 relative rounded-[50px] size-full"
-                      data-name="Background"
-                    />
-                  </div>
-                  <div
-                    className="h-[22.58px] relative shrink-0 w-[123px]"
-                    data-node-id="2:822"
-                    data-name="Container"
-                  >
-                    <div
-                      className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] left-0 not-italic text-[#2c2e2a] text-[18.1px] top-[10.5px] tracking-[-0.722px] whitespace-nowrap"
-                      data-node-id="2:823"
-                    >
-                      <p className="leading-[22.58px]">Cómo funciona</p>
-                    </div>
-                  </div>
-                </button>
-              </div>
-              <div
-                className="content-stretch flex h-full items-center relative shrink-0"
-                data-node-id="2:824"
-                data-name="Item"
-              >
-                <button
-                  type="button"
-                  onClick={() => scrollToY(6000)}
-                  className="mindmarket-nav-item content-stretch flex gap-[8.5px] items-center justify-center min-h-[46.75px] pb-[10.63px] pt-[10.62px] px-[17px] relative rounded-[50px] shrink-0"
-                  data-node-id="2:825"
-                  data-name="Link"
-                >
-                  <div
-                    className="absolute inset-[4.67px_17.67px_4.68px_15.87px] flex items-center justify-center"
-                    data-node-id="2:826"
-                  >
-                    <div
-                      className="nav-pill-bg bg-[#f5f1e4] opacity-0 relative rounded-[50px] size-full"
-                      data-name="Background"
-                    />
-                  </div>
-                  <div
-                    className="h-[22.58px] relative shrink-0 w-[58px]"
-                    data-node-id="2:827"
-                    data-name="Container"
-                  >
-                    <div
-                      className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] left-0 not-italic text-[#2c2e2a] text-[18.1px] top-[10.5px] tracking-[-0.722px] whitespace-nowrap"
-                      data-node-id="2:828"
-                    >
-                      <p className="leading-[22.58px]">Rubros</p>
-                    </div>
-                  </div>
-                  <div
-                    className="content-stretch flex flex-col items-start pb-[7.14px] pt-[8.36px] relative shrink-0"
-                    data-node-id="2:829"
-                    data-name="Container"
-                  >
-                    <div
-                      className="nav-chevron relative shrink-0 size-[10px]"
-                      data-node-id="2:830"
-                      data-name="SVG"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgSvg5}
-                      />
-                    </div>
-                  </div>
-                </button>
-              </div>
-              <div
-                className="content-stretch flex h-full items-center relative shrink-0"
-                data-node-id="2:832"
-                data-name="Item"
-              >
-                <button
-                  type="button"
-                  onClick={() => scrollToY(3300)}
-                  className="mindmarket-nav-item content-stretch flex gap-[8.51px] items-center justify-center min-h-[46.75px] pb-[10.63px] pt-[10.62px] px-[17px] relative rounded-[50px] shrink-0"
-                  data-node-id="2:833"
-                  data-name="Link"
-                >
-                  <div
-                    className="absolute inset-[4.67px_13.15px_4.68px_11.37px] flex items-center justify-center"
-                    data-node-id="2:834"
-                  >
-                    <div
-                      className="nav-pill-bg bg-[#f5f1e4] opacity-0 relative rounded-[50px] size-full"
-                      data-name="Background"
-                    />
-                  </div>
-                  <div
-                    className="h-[22.58px] relative shrink-0 w-[92px]"
-                    data-node-id="2:835"
-                    data-name="Container"
-                  >
-                    <div
-                      className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] left-0 not-italic text-[#2c2e2a] text-[18.1px] top-[10.5px] tracking-[-0.722px] whitespace-nowrap"
-                      data-node-id="2:836"
-                    >
-                      <p className="leading-[22.58px]">Panel Móvil</p>
-                    </div>
-                  </div>
-                  <div
-                    className="content-stretch flex flex-col items-start pb-[7.14px] pt-[8.36px] relative shrink-0"
-                    data-node-id="2:837"
-                    data-name="Container"
-                  >
-                    <div
-                      className="nav-chevron relative shrink-0 size-[10px]"
-                      data-node-id="2:838"
-                      data-name="SVG"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgSvg5}
-                      />
-                    </div>
-                  </div>
-                </button>
-              </div>
-              <div
-                className="content-stretch flex h-full items-center relative shrink-0"
-                data-node-id="2:840"
-                data-name="Item"
-              >
-                <button
-                  type="button"
-                  onClick={() => scrollToY(9403)}
-                  className="mindmarket-nav-item content-stretch flex gap-[8.49px] items-center justify-center min-h-[46.75px] pb-[10.63px] pt-[10.62px] px-[17px] relative rounded-[50px] shrink-0"
-                  data-node-id="2:841"
-                  data-name="Link"
-                >
-                  <div
-                    className="absolute inset-[4.67px_14.63px_4.68px_11.98px] flex items-center justify-center"
-                    data-node-id="2:842"
-                  >
-                    <div
-                      className="nav-pill-bg bg-[#f5f1e4] opacity-0 relative rounded-[50px] size-full"
-                      data-name="Background"
-                    />
-                  </div>
-                  <div
-                    className="h-[22.58px] relative shrink-0 w-[54px]"
-                    data-node-id="2:843"
-                    data-name="Container"
-                  >
-                    <div
-                      className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] left-0 not-italic text-[#2c2e2a] text-[18.1px] top-[10.5px] tracking-[-0.722px] whitespace-nowrap"
-                      data-node-id="2:844"
-                    >
-                      <p className="leading-[22.58px]">Planes</p>
-                    </div>
-                  </div>
-                  <div
-                    className="content-stretch flex flex-col items-start pb-[7.14px] pt-[8.36px] relative shrink-0"
-                    data-node-id="2:845"
-                    data-name="Container"
-                  >
-                    <div
-                      className="nav-chevron relative shrink-0 size-[10px]"
-                      data-node-id="2:846"
-                      data-name="SVG"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgSvg5}
-                      />
-                    </div>
-                  </div>
-                </button>
-              </div>
-              <div
-                className="content-stretch flex flex-col h-full items-start justify-center pl-[17px] relative shrink-0"
-                data-node-id="2:853"
-                data-name="Item:margin"
-              >
-                <div
-                  className="content-stretch flex flex-[1_0_0] items-center min-h-px relative"
-                  data-node-id="2:854"
-                  data-name="Item"
-                >
-                  <div
-                    className="content-stretch flex flex-col items-start relative shrink-0"
-                    data-node-id="2:855"
-                    data-name="Container"
-                  >
+
+              {/* Right Feature Card 1 */}
+              <div className="md:col-span-7 flex justify-end order-1 md:order-2">
+                <div className="timeline-feature-card relative w-full md:max-w-[692.5px] rounded-[14px] md:rounded-[10px] bg-white p-[28px] sm:p-[36px] md:p-[53px] shadow-[0_2px_0_1px_#ff705d,0_16px_40px_rgba(44,46,42,0.06)] flex flex-col gap-[22px] md:gap-[26.6px]">
+                  <h3 className="mali-heading-reveal font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[34px] sm:text-[42px] md:text-[53.1px] leading-[1.14] tracking-[-0.02em]">
+                    <span className="block">
+                      {renderMaliWords("Catálogo y agenda")}
+                    </span>
+                    <span className="block">
+                      {renderMaliWords("a WhatsApp")}
+                    </span>
+                  </h3>
+
+                  <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[18px] md:text-[20.2px] leading-[1.4] md:leading-[25.23px] tracking-[-0.03em]">
+                    Tus clientes eligen platos o servicios, agregan adiciones y
+                    salsas o seleccionan especialista. El domicilio se calcula
+                    por barrio y tú recibes el pedido o la cita lista en tu
+                    WhatsApp.
+                  </p>
+
+                  <div>
                     <button
                       type="button"
-                      onClick={() => scrollToY(11869)}
-                      className="mindmarket-pill-btn content-stretch flex items-center justify-center relative shrink-0 size-[42.5px]"
-                      data-node-id="2:856"
-                      data-name="Button"
+                      onClick={() => scrollToSection("panel-movil")}
+                      className="mindmarket-pill-btn bg-[#ff705d] min-h-[58px] md:min-h-[63.75px] p-[11.6px] rounded-[10px] inline-flex items-center gap-[8.5px]"
                     >
-                      <div
-                        className="pill-circle absolute bg-[#626cd4] inset-0 rounded-[42.5px]"
-                        data-node-id="2:857"
-                        data-name="Background"
-                      />
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0 size-[22px]"
-                        data-node-id="2:858"
-                        data-name="Container"
-                      >
-                        <div
-                          className="relative shrink-0 size-[22px]"
-                          data-node-id="2:859"
-                          data-name="SVG"
-                        >
-                          <img
-                            alt=""
-                            className="absolute block inset-0 max-w-none size-full"
-                            src={imgSvg6}
-                          />
-                        </div>
-                      </div>
+                      <span className="font-['Inter:Medium'] font-inter font-medium text-[17px] md:text-[18.1px] text-black px-[10.6px] whitespace-nowrap">
+                        Cómo funciona
+                      </span>
+                      <span className="pill-circle bg-white rounded-full size-[42.5px] flex items-center justify-center shrink-0">
+                        <img
+                          alt=""
+                          src={imgArrowRight}
+                          className="pill-arrow size-[21.25px]"
+                        />
+                      </span>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="content-stretch flex flex-col items-start relative self-stretch shrink-0"
-            data-node-id="2:861"
-            data-name="Container"
-          >
+
+            {/* ---------------------------------------------------------------
+                ROW 2: "Panel autogestionable en 10 segundos"
+               --------------------------------------------------------------- */}
             <div
-              className="h-[68px] min-h-[68px] relative shrink-0 w-[223px]"
-              data-node-id="2:862"
-              data-name="c-button-quote"
+              id="panel-movil"
+              className="w-[92%] md:w-full mx-auto grid grid-cols-1 md:grid-cols-12 items-center gap-8 md:gap-10"
             >
+              {/* Left Feature Card 2 */}
+              <div className="md:col-span-7 flex justify-start">
+                <div className="timeline-feature-card relative w-full md:max-w-[692.5px] rounded-[14px] md:rounded-[10px] bg-white p-[28px] sm:p-[36px] md:p-[53px] shadow-[0_2px_0_1px_#f5e211,0_16px_40px_rgba(44,46,42,0.06)] flex flex-col gap-[22px] md:gap-[26.6px]">
+                  <h3 className="mali-heading-reveal font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[34px] sm:text-[42px] md:text-[53.1px] leading-[1.14] tracking-[-0.02em]">
+                    <span className="block">
+                      {renderMaliWords("Panel autogestionable")}
+                    </span>
+                    <span className="block">
+                      {renderMaliWords("en 10 segundos")}
+                    </span>
+                  </h3>
+
+                  <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[18px] md:text-[20.2px] leading-[1.4] md:leading-[25.23px] tracking-[-0.03em]">
+                    Cambia precios, actualiza fotos y marca productos como
+                    agotados desde el celular. Sin depender de nadie: tu
+                    catálogo y tu agenda al día, en segundos.
+                  </p>
+
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => scrollToSection("cobros-locales")}
+                      className="mindmarket-pill-btn bg-[#f5e211] min-h-[58px] md:min-h-[63.75px] p-[11.6px] rounded-[10px] inline-flex items-center gap-[8.5px]"
+                    >
+                      <span className="font-['Inter:Medium'] font-inter font-medium text-[17px] md:text-[18.1px] text-black px-[10.6px] whitespace-nowrap">
+                        Ver Panel Móvil
+                      </span>
+                      <span className="pill-circle bg-white rounded-full size-[42.5px] flex items-center justify-center shrink-0">
+                        <img
+                          alt=""
+                          src={imgArrowRight}
+                          className="pill-arrow size-[21.25px]"
+                        />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Character & Folder/Sheet/Plane2 Decor */}
+              <div className="md:col-span-5 relative flex items-center justify-center">
+                <div className="parallax-decor hidden md:block absolute -top-14 left-0 w-[135px] lg:w-[180px]">
+                  <img alt="" src={imgFolder} className="w-full h-auto" />
+                </div>
+                <div className="parallax-decor hidden md:block absolute -top-20 right-10 w-[115px] lg:w-[145px] -rotate-[10deg]">
+                  <img alt="" src={imgPlane2} className="w-full h-auto" />
+                </div>
+                <div className="parallax-decor hidden md:block absolute bottom-4 left-2 w-[120px] lg:w-[155px]">
+                  <img alt="" src={imgSheet} className="w-full h-auto" />
+                </div>
+                <div className="parallax-character w-[82%] sm:w-[70%] md:w-full max-w-[580px]">
+                  <img
+                    alt="Panel autogestionable Webify"
+                    src={imgChar10}
+                    className="w-full h-auto block"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* ---------------------------------------------------------------
+                ROW 3: "Cobro local sin fricción"
+               --------------------------------------------------------------- */}
+            <div
+              id="cobros-locales"
+              className="w-[92%] md:w-full mx-auto grid grid-cols-1 md:grid-cols-12 items-center gap-8 md:gap-10"
+            >
+              {/* Left Companion Characters & Music Notes */}
+              <div className="md:col-span-4 relative flex flex-col items-center justify-center order-2 md:order-1">
+                <div className="parallax-decor hidden md:block absolute -top-12 left-4 w-[95px] lg:w-[120px]">
+                  <img alt="" src={imgMusicNote1} className="w-full h-auto" />
+                </div>
+                <div className="parallax-character w-[78%] sm:w-[65%] md:w-full max-w-[440px]">
+                  <img
+                    alt="Pagos locales Webify"
+                    src={imgChar11}
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <div className="parallax-character hidden md:block -mt-12 -ml-16 w-[85%] max-w-[400px]">
+                  <img alt="" src={imgChar2} className="w-full h-auto block" />
+                </div>
+              </div>
+
+              {/* Center Feature Card 3 */}
+              <div className="md:col-span-5 flex justify-center order-1 md:order-2">
+                <div className="timeline-feature-card relative w-full md:max-w-[573.75px] rounded-[14px] md:rounded-[10px] bg-white p-[28px] sm:p-[36px] md:p-[53px] shadow-[0_2px_0_1px_#074679,0_16px_40px_rgba(44,46,42,0.06)] flex flex-col gap-[22px] md:gap-[26.6px]">
+                  <h3 className="mali-heading-reveal font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[34px] sm:text-[42px] md:text-[53.1px] leading-[1.14] tracking-[-0.02em]">
+                    <span className="block">
+                      {renderMaliWords("Cobro local")}
+                    </span>
+                    <span className="block">
+                      {renderMaliWords("sin fricción")}
+                    </span>
+                  </h3>
+
+                  <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[18px] md:text-[20.2px] leading-[1.4] md:leading-[25.23px] tracking-[-0.03em]">
+                    Recibe pagos por Nequi, Bre-B o Daviplata. Conecta una
+                    pasarela 24/7 con Wompi, PSE y Addi para que tus clientes
+                    paguen como prefieren, sin complicaciones.
+                  </p>
+
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => scrollToSection("planes")}
+                      className="mindmarket-pill-btn bg-[#074679] min-h-[58px] md:min-h-[63.75px] p-[11.6px] rounded-[10px] inline-flex items-center gap-[8.5px]"
+                    >
+                      <span className="font-['Inter:Medium'] font-inter font-medium text-[17px] md:text-[18.1px] text-white px-[10.6px] whitespace-nowrap">
+                        Ver planes
+                      </span>
+                      <span className="pill-circle bg-white rounded-full size-[42.5px] flex items-center justify-center shrink-0">
+                        <img
+                          alt=""
+                          src={imgArrowRight}
+                          className="pill-arrow size-[21.25px]"
+                        />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Companion Character & Music/Trumpet Decor */}
+              <div className="hidden md:flex md:col-span-3 relative flex-col items-center justify-center order-3">
+                <div className="parallax-decor absolute -top-16 left-2 w-[110px]">
+                  <img alt="" src={imgMusicNote2} className="w-full h-auto" />
+                </div>
+                <div className="parallax-decor absolute -top-6 right-6 w-[115px]">
+                  <img alt="" src={imgMusicNote3} className="w-full h-auto" />
+                </div>
+                <div className="parallax-character w-full max-w-[460px]">
+                  <img alt="" src={imgChar8} className="w-full h-auto block" />
+                </div>
+                <div className="parallax-decor mt-4 w-[160px]">
+                  <img alt="" src={imgTrumpetShape} className="w-full h-auto" />
+                </div>
+              </div>
+            </div>
+
+            {/* ---------------------------------------------------------------
+                ROW 4: "Una web con carácter propio"
+               --------------------------------------------------------------- */}
+            <div
+              id="rubros"
+              className="w-[92%] md:w-full mx-auto grid grid-cols-1 md:grid-cols-12 items-center gap-8 md:gap-10"
+            >
+              {/* Left Companion Characters & Joystick/Soccer Decor */}
+              <div className="md:col-span-5 relative flex flex-col items-center justify-center order-2 md:order-1">
+                <div className="parallax-decor hidden md:block absolute -top-10 left-0 w-[130px]">
+                  <img alt="" src={imgGamerShape} className="w-full h-auto" />
+                </div>
+                <div className="parallax-decor hidden md:block absolute -top-8 right-8 w-[115px]">
+                  <img alt="" src={imgJoystick} className="w-full h-auto" />
+                </div>
+                <div className="parallax-character w-[82%] sm:w-[70%] md:w-[88%] max-w-[500px]">
+                  <img
+                    alt="Diseño web con carácter propio"
+                    src={imgChar12}
+                    className="w-full h-auto block"
+                  />
+                </div>
+                <div className="parallax-character hidden md:block -mt-10 w-[95%] max-w-[560px]">
+                  <img alt="" src={imgChar4} className="w-full h-auto block" />
+                </div>
+              </div>
+
+              {/* Right Feature Card 4 */}
+              <div className="md:col-span-7 flex flex-col items-end gap-8 order-1 md:order-2">
+                <div className="timeline-feature-card relative w-full md:max-w-[692.5px] rounded-[14px] md:rounded-[10px] bg-white p-[28px] sm:p-[36px] md:p-[53px] shadow-[0_2px_0_1px_#ebc1ff,0_16px_40px_rgba(44,46,42,0.06)] flex flex-col gap-[22px] md:gap-[26.6px]">
+                  <h3 className="mali-heading-reveal font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[34px] sm:text-[42px] md:text-[53.1px] leading-[1.14] tracking-[-0.02em]">
+                    <span className="block">
+                      {renderMaliWords("Una web con")}
+                    </span>
+                    <span className="block">
+                      {renderMaliWords("carácter propio")}
+                    </span>
+                  </h3>
+
+                  <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[18px] md:text-[20.2px] leading-[1.4] md:leading-[25.23px] tracking-[-0.03em]">
+                    Diseñamos a medida para estudios de uñas, spas, barberías y
+                    restaurantes en Colombia. Tu identidad, tus servicios y tus
+                    platos; sin plantillas de IA. De Instagram a tu web y de ahí
+                    a tu WhatsApp.
+                  </p>
+
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => scrollToSection("a-tu-medida")}
+                      className="mindmarket-pill-btn bg-[#ebc1ff] min-h-[58px] md:min-h-[63.75px] p-[11.6px] rounded-[10px] inline-flex items-center gap-[8.5px]"
+                    >
+                      <span className="font-['Inter:Medium'] font-inter font-medium text-[17px] md:text-[18.1px] text-black px-[10.6px] whitespace-nowrap">
+                        Ver rubros
+                      </span>
+                      <span className="pill-circle bg-white rounded-full size-[42.5px] flex items-center justify-center shrink-0">
+                        <img
+                          alt=""
+                          src={imgArrowRight}
+                          className="pill-arrow size-[21.25px]"
+                        />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Companion Character & Soccer Vectors below Card 4 on Desktop */}
+                <div className="hidden md:flex items-center justify-between w-full max-w-[692.5px] relative">
+                  <div className="flex items-center gap-4">
+                    <img
+                      alt=""
+                      src={imgJoystickShape}
+                      className="parallax-decor w-[140px] h-auto"
+                    />
+                    <img
+                      alt=""
+                      src={imgSoccerShape2}
+                      className="parallax-decor w-[110px] h-auto"
+                    />
+                    <img
+                      alt=""
+                      src={imgSoccerShape3}
+                      className="parallax-decor w-[100px] h-auto"
+                    />
+                    <img
+                      alt=""
+                      src={imgSoccerShape4}
+                      className="parallax-decor w-[150px] h-auto"
+                    />
+                  </div>
+                  <div className="parallax-character w-[360px]">
+                    <img
+                      alt=""
+                      src={imgChar3}
+                      className="w-full h-auto block"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* -----------------------------------------------------------------
+              TIMELINE END SCENE: CLOUDS, RUNNER, CYCLIST, EXPLORER & GREEN HILLS
+             ----------------------------------------------------------------- */}
+          <div className=" pointer-events-none absolute bottom-0 left-0 right-0 h-[280px] sm:h-[380px] md:h-[580px] lg:h-[720px] z-[12]">
+            {/* Floating Clouds */}
+            <img
+              alt=""
+              src={imgCloud1}
+              className="parallax-decor absolute top-0 right-[28%] w-[32%] max-w-[580px]"
+            />
+            <img
+              alt=""
+              src={imgCloud2}
+              className="parallax-decor absolute top-[18%] left-[4%] w-[12%] max-w-[190px]"
+            />
+            <img
+              alt=""
+              src={imgCloud3}
+              className="parallax-decor hidden md:block absolute top-[28%] -left-[6%] w-[18%] max-w-[320px]"
+            />
+            <img
+              alt=""
+              src={imgCloud4}
+              className="parallax-decor absolute top-[40%] right-[14%] w-[10%] max-w-[150px]"
+            />
+            <img
+              alt=""
+              src={imgCloud5}
+              className="parallax-decor absolute top-[45%] left-[14%] w-[7%] max-w-[96px]"
+            />
+
+            {/* Back Green Hills */}
+            <img
+              alt=""
+              src={imgHillsBack}
+              className="absolute bottom-[-8%] left-0 w-full h-auto object-cover"
+            />
+
+            {/* 3 End Characters: Basketball Runner (Left), Cyclist (Center), Binoculars Explorer (Right) */}
+            <div className="parallax-character absolute bottom-[12%] left-[-3%] w-[38%] max-w-[560px]">
+              <img alt="" src={imgEndRunner} className="w-full h-auto block" />
+            </div>
+            <div className="parallax-character absolute bottom-[10%] left-[25%] w-[44%] max-w-[680px]">
+              <img alt="" src={imgEndCyclist} className="w-full h-auto block" />
+            </div>
+            <div className="parallax-character absolute bottom-[8%] right-[-4%] w-[46%] max-w-[740px]">
+              <img
+                alt=""
+                src={imgEndExplorer}
+                className="w-full h-auto block"
+              />
+            </div>
+
+            {/* Middle & Front Green Hills */}
+            <img
+              alt=""
+              src={imgHillsMiddle}
+              className="absolute bottom-[-3%] left-0 w-full h-auto object-cover"
+            />
+            <img
+              alt=""
+              src={imgHillsFront}
+              className="absolute bottom-[-1%] left-0 w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* =====================================================================
+          BLOCK 3: DELUXE CALLOUT INDIGO ("Tu web, a tu medida")
+         ===================================================================== */}
+      <section
+        id="a-tu-medida"
+        className="card-stack-block relative z-[14] w-full bg-[#626cd4] rounded-b-[36px] md:rounded-b-[50px] -mt-[24px] md:-mt-[40px] pt-[90px] md:pt-[150px] pb-[80px] md:pb-[140px] px-4 md:px-12 lg:px-[100px] overflow-x-clip"
+      >
+        <div className="card-stack-overlay absolute inset-0 rounded-b-[36px] md:rounded-b-[50px] bg-[#2c2e2a] opacity-0 pointer-events-none" />
+
+        <div className="relative z-10 max-w-[1640px] mx-auto flex flex-col items-center">
+          {/* Character Illustration on Left/Background */}
+          <div className="parallax-character md:absolute md:-top-[60px] md:left-[-4%] lg:left-0 w-[78%] sm:w-[60%] md:w-[44%] max-w-[680px] mb-6 md:mb-0 pointer-events-none z-[1]">
+            <img
+              alt="Ilustración personaje Webify"
+              src={imgCalloutChar}
+              className="w-full h-auto block"
+            />
+          </div>
+
+          {/* Headline & Copy */}
+          <div className="relative z-[3] flex flex-col items-center gap-[32px] md:gap-[64px] w-full">
+            <h2 className="mali-heading-reveal font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[52px] sm:text-[76px] md:text-[124px] lg:text-[160px] xl:text-[186.2px] leading-[1.02] md:leading-[0.95] tracking-[-0.02em] text-center">
+              <span className="block">{renderMaliWords("Tu web,")}</span>
+              <span className="block">{renderMaliWords("a tu medida")}</span>
+            </h2>
+
+            <div className="flex flex-col items-center gap-[24px] max-w-[595px]">
+              <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[20px] sm:text-[24px] md:text-[29.8px] leading-[1.25] md:leading-[35.7px] tracking-[-0.04em] text-center">
+                Dale a tu negocio una web con carácter propio. Tus clientes
+                eligen y tú recibes el pedido o la cita lista en tu WhatsApp.
+                Diseñada para ti, sin plantillas de IA.
+              </p>
+
               <button
                 type="button"
                 onClick={() => openQuoteWhatsApp()}
-                className="mindmarket-pill-btn absolute border border-[rgba(0,0,0,0)] border-solid content-stretch flex gap-[8.5px] items-center left-0 min-h-[68px] px-[11.625px] py-[14px] rounded-[10px] top-0 shadow-[0_8px_30px_rgba(44,46,42,0.08)]"
-                data-node-id="2:865"
-                data-name="Link"
+                className="mindmarket-pill-btn bg-white min-h-[60px] md:min-h-[63.75px] p-[11.6px] rounded-[10px] inline-flex items-center gap-[8.5px] shadow-[0_8px_24px_rgba(44,46,42,0.1)]"
               >
-                <div
-                  className="absolute bg-white h-[66px] left-0 rounded-[10px] top-0 w-[221px]"
-                  data-node-id="2:866"
-                  data-name="Background"
-                />
-                <div
-                  className="relative shrink-0"
-                  data-node-id="2:867"
-                  data-name="Container"
-                >
-                  <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[10.625px] relative size-full">
-                    <div
-                      className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18.1px] text-black whitespace-nowrap"
-                      data-node-id="2:868"
-                    >
-                      <p className="leading-[27px]">Cotizar mi web</p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="pill-circle bg-[#626cd4] relative rounded-[42.5px] shrink-0 size-[40px]"
-                  data-node-id="5:13"
-                  data-name="Background"
-                >
-                  <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-                    <div
-                      className="content-stretch flex flex-col items-start relative shrink-0"
-                      data-node-id="5:14"
-                      data-name="Container"
-                    >
-                      <div
-                        className="pill-arrow relative shrink-0 size-[21.25px]"
-                        data-node-id="5:15"
-                        data-name="SVG"
-                      >
-                        <img
-                          alt=""
-                          className="absolute block inset-0 max-w-none size-full"
-                          src={imgSvg}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main 1920px Figma Coordinate Stage scaled proportionally */}
-      <div
-        className="bg-white content-stretch flex flex-col items-start absolute top-0 left-0"
-        data-node-id="2:2"
-        data-name="Html → Body"
-        style={{
-          width: `${DESIGN_WIDTH}px`,
-          height: `${DESIGN_HEIGHT}px`,
-          transform: `scale(${canvasScale})`,
-          transformOrigin: "top left",
-        }}
-      >
-        <div
-          className="bg-[#f5f1e4] content-stretch flex flex-col items-start relative shrink-0 w-full"
-          data-node-id="2:3"
-          data-name="Main"
-        >
-          <div
-            className="h-[13069.056px] relative shrink-0 w-full"
-            data-node-id="2:4"
-            data-name="Container"
-          >
-            {/* BLOCK 1: HERO INDIGO */}
-            <div
-              className="card-stack-block absolute content-stretch flex flex-col items-start left-0 min-h-[1200px] right-0 top-0"
-              data-node-id="2:5"
-              data-name="Container"
-            >
-              <div
-                className="absolute bg-[#626cd4] content-stretch flex flex-col h-[2400px] items-start left-0 top-0 w-[1920px]"
-                data-node-id="2:6"
-                data-name="Background"
-              >
-                <div
-                  className="card-stack-overlay absolute bg-[#2c2e2a] h-[2400px] left-0 opacity-0 top-0 w-[1920px] pointer-events-none"
-                  data-node-id="2:7"
-                  data-name="Background"
-                />
-                <div
-                  className="content-stretch flex items-center justify-center min-h-[1200px] pb-[491.42px] pt-[267.01px] px-[20px] relative shrink-0 w-full"
-                  data-node-id="2:8"
-                  data-name="Container"
-                >
-                  <div
-                    className="content-stretch flex flex-col gap-[50px] items-center relative shrink-0 w-[1503.22px]"
-                    data-node-id="2:9"
-                    data-name="Container"
-                  >
-                    <div
-                      className="mali-heading-reveal content-stretch flex flex-col items-center pb-[0.88px] relative shrink-0 w-full"
-                      data-node-id="2:10"
-                      data-name="Heading 1"
-                    >
-                      <div
-                        className="[word-break:break-word] flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[186.2px] text-center tracking-[-3.724px] w-[1503.22px]"
-                        data-node-id="2:11"
-                      >
-                        <p className="leading-[176.93px] mb-0">
-                          {renderMaliWords("Diseño web")}
-                        </p>
-                        <p className="leading-[176.93px]">
-                          {renderMaliWords("hecho a medida")}
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="content-stretch flex flex-col items-center pb-[0.69px] relative shrink-0 w-full"
-                      data-node-id="2:12"
-                      data-name="Heading 2"
-                    >
-                      <div
-                        className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[29.8px] text-center tracking-[-1.785px] w-[1503.22px]"
-                        data-node-id="2:13"
-                      >
-                        <p className="leading-[35.7px]">
-                          De Instagram a tu WhatsApp, sin plantillas de IA
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="bg-[#626cd4] content-stretch flex flex-col items-start opacity-0 pointer-events-none relative shrink-0 w-full"
-                data-node-id="2:14"
-                data-name="Background"
-              >
-                <div
-                  className="content-stretch flex items-center justify-center min-h-[1200px] pb-[491.42px] pt-[267.01px] px-[20px] relative shrink-0 w-full"
-                  data-node-id="2:15"
-                  data-name="Container"
-                />
-              </div>
-            </div>
-
-            {/* BLOCK 3: DELUXE CALLOUT INDIGO ("Tu web, a tu medida") */}
-            <div
-              className="card-stack-block card-stack-overlap absolute bg-[#626cd4] content-stretch flex flex-col items-start left-0 pb-[170px] pt-[168.96px] px-[138.75px] right-0 rounded-bl-[50px] rounded-br-[50px] top-[8112.66px]"
-              data-node-id="2:22"
-              data-name="c-deluxe-callout"
-            >
-              {/* Subtle top extension so there is zero gap behind timeline green hills */}
-              <div className="absolute left-0 right-0 -top-[45px] h-[50px] bg-[#626cd4] pointer-events-none" />
-              <div className="card-stack-overlay absolute inset-0 rounded-bl-[50px] rounded-br-[50px] bg-[#2c2e2a] opacity-0 pointer-events-none" />
-
-              <div
-                className="content-stretch flex flex-col gap-[84px] items-start relative shrink-0 w-full z-[4]"
-                data-node-id="2:23"
-                data-name="Container"
-              >
-                <div
-                  className="mali-heading-reveal content-stretch flex flex-col items-center pb-[0.88px] relative shrink-0 w-full"
-                  data-node-id="2:24"
-                  data-name="Container"
-                >
-                  <div
-                    className="[word-break:break-word] flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[186.2px] text-center tracking-[-3.724px] whitespace-nowrap"
-                    data-node-id="2:25"
-                  >
-                    <p className="leading-[176.93px] mb-0">
-                      {renderMaliWords("Tu web,")}
-                    </p>
-                    <p className="leading-[176.93px]">
-                      {renderMaliWords("a tu medida")}
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="content-stretch flex flex-col gap-[25.5px] items-center relative shrink-0 w-full"
-                  data-node-id="2:26"
-                  data-name="Container"
-                >
-                  <div
-                    className="content-stretch flex flex-col items-center max-w-[595px] pb-[0.72px] pl-[46.59px] pr-[46.61px] relative shrink-0"
-                    data-node-id="2:27"
-                    data-name="Container"
-                  >
-                    <div
-                      className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[29.8px] text-center tracking-[-1.785px] w-[595px]"
-                      data-node-id="2:28"
-                    >
-                      <p className="leading-[35.7px] mb-0">
-                        Dale a tu negocio una web con carácter propio.
-                      </p>
-                      <p className="leading-[35.7px] mb-0">
-                        Tus clientes eligen y tú recibes el pedido
-                      </p>
-                      <p className="leading-[35.7px] mb-0">
-                        o la cita lista en tu WhatsApp.
-                      </p>
-                      <p className="leading-[35.7px]">
-                        Diseñada para ti, sin plantillas de IA.
-                      </p>
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => openQuoteWhatsApp()}
-                    className="mindmarket-pill-btn border border-[rgba(0,0,0,0)] border-solid content-stretch flex gap-[8.49px] items-center min-h-[63.75px] p-[11.625px] relative rounded-[10px] shrink-0"
-                    data-node-id="2:29"
-                    data-name="Link"
-                  >
-                    <div
-                      className="absolute bg-white h-[63.75px] left-0 rounded-[10px] top-0 w-[223.49px]"
-                      data-node-id="2:30"
-                      data-name="Background"
-                    />
-                    <div
-                      className="relative shrink-0"
-                      data-node-id="2:31"
-                      data-name="Container"
-                    >
-                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[10.625px] relative size-full">
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18.1px] text-black whitespace-nowrap"
-                          data-node-id="2:32"
-                        >
-                          <p className="leading-[27px]">Cotizar mi web</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="pill-circle bg-[#626cd4] relative rounded-[42.5px] shrink-0 size-[42.5px]"
-                      data-node-id="2:33"
-                      data-name="Background"
-                    >
-                      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-                        <div
-                          className="content-stretch flex flex-col items-start relative shrink-0"
-                          data-node-id="2:34"
-                          data-name="Container"
-                        >
-                          <div
-                            className="pill-arrow relative shrink-0 size-[21.25px]"
-                            data-node-id="2:35"
-                            data-name="SVG"
-                          >
-                            <img
-                              alt=""
-                              className="absolute block inset-0 max-w-none size-full"
-                              src={imgSvg}
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-                <div
-                  className="h-[193.58px] relative shrink-0 w-full"
-                  data-node-id="2:37"
-                  data-name="Container"
-                >
-                  <div
-                    className="absolute content-stretch flex flex-col items-center left-0 pb-[0.58px] right-[1108.34px] top-[170px]"
-                    data-node-id="2:38"
-                    data-name="Container"
-                  >
-                    <div
-                      className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[18.1px] text-center tracking-[-0.722px] whitespace-nowrap"
-                      data-node-id="2:39"
-                    >
-                      <p className="leading-[22.58px]">
-                        Diseño con carácter propio
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="absolute content-stretch flex flex-col items-center left-[554.16px] pb-[0.58px] right-[554.17px] top-[170px]"
-                    data-node-id="2:40"
-                    data-name="Container"
-                  >
-                    <div
-                      className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[18.1px] text-center tracking-[-0.722px] whitespace-nowrap"
-                      data-node-id="2:41"
-                    >
-                      <p className="leading-[22.58px]">
-                        Control desde tu celular
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="absolute content-stretch flex flex-col items-center left-[1108.33px] pb-[0.58px] right-0 top-[170px]"
-                    data-node-id="2:42"
-                    data-name="Container"
-                  >
-                    <div
-                      className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[18.1px] text-center tracking-[-0.722px] whitespace-nowrap"
-                      data-node-id="2:43"
-                    >
-                      <p className="leading-[22.58px]">
-                        Pedidos y citas a WhatsApp
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="absolute content-stretch flex flex-col inset-[-1200px_44%_-0.03px_0] items-start pointer-events-none z-[2]"
-                data-node-id="2:44"
-                data-name="Container"
-              >
-                <div
-                  className="h-[1200px] relative shrink-0 w-full"
-                  data-node-id="2:45"
-                  data-name="Container"
-                >
-                  <div
-                    className="parallax-character absolute bottom-[-852.97px] content-stretch flex flex-col items-start left-0 pt-[852.97px]"
-                    data-node-id="2:46"
-                    data-name="c-rive"
-                  >
-                    <div
-                      className="aspect-[1979/1570] w-[1075.19px] content-stretch flex flex-col items-start justify-center relative shrink-0"
-                      data-node-id="2:47"
-                      data-name="Container"
-                    >
-                      <div
-                        className="h-[852.97px] relative shrink-0 w-full"
-                        data-node-id="2:48"
-                        data-name="image"
-                      >
-                        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                          <img
-                            alt="Ilustración personaje Webify"
-                            className="absolute left-0 max-w-none size-full top-0"
-                            src={imgImage}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* BLOCK 2: CREAM SECTION + CENTRAL HERO ILLUSTRATION + TIMELINE */}
-            <div
-              className="card-stack-block card-stack-overlap absolute bg-[#f5f1e4] content-stretch flex flex-col isolate items-start left-0 right-0 rounded-tl-[50px] rounded-tr-[50px] top-[1200px] z-[10]"
-              data-node-id="2:393"
-              data-name="Background"
-            >
-              <div
-                className="content-stretch flex flex-col items-start mb-[-91.19px] pb-[456.81px] pl-[138.75px] pr-[1037.5px] pt-[137.625px] relative shrink-0 w-full z-[2]"
-                data-node-id="2:394"
-                data-name="Container"
-              >
-                <div
-                  className="content-stretch flex flex-col gap-[38.25px] items-start max-w-[743.75px] relative shrink-0 w-full z-[3]"
-                  data-node-id="2:395"
-                  data-name="Container"
-                >
-                  <div
-                    className="content-stretch flex flex-col items-start pb-[0.565px] relative shrink-0 w-full"
-                    data-node-id="2:396"
-                    data-name="Container"
-                  >
-                    <div
-                      className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[29.8px] tracking-[-1.785px] w-full"
-                      data-node-id="2:397"
-                    >
-                      <p className="leading-[35.7px]">
-                        En Webify diseñamos páginas con carácter propio para
-                        estudios de uñas, spas, barberías y restaurantes en
-                        Colombia. Tus clientes eligen servicios o platos y tú
-                        recibes el pedido o la cita lista en tu WhatsApp.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                    data-node-id="2:398"
-                    data-name="Container"
-                  >
-                    <button
-                      type="button"
-                      onClick={() => scrollToY(9403)}
-                      className="mindmarket-pill-btn border border-[rgba(0,0,0,0)] border-solid content-stretch flex gap-[8.49px] items-center min-h-[63.75px] p-[11.625px] relative rounded-[10px] shrink-0"
-                      data-node-id="2:399"
-                      data-name="Link"
-                    >
-                      <div
-                        className="absolute bg-white h-[63.75px] left-0 rounded-[10px] top-0 w-[330.49px]"
-                        data-node-id="2:400"
-                        data-name="Background"
-                      />
-                      <div
-                        className="relative shrink-0"
-                        data-node-id="2:401"
-                        data-name="Container"
-                      >
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[10.625px] relative size-full">
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18.1px] text-black whitespace-nowrap"
-                            data-node-id="2:402"
-                          >
-                            <p className="leading-[27px]">
-                              Ver planes desde $150.000
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="pill-circle bg-[#626cd4] relative rounded-[42.5px] shrink-0 size-[42.5px]"
-                        data-node-id="2:403"
-                        data-name="Background"
-                      >
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-                          <div
-                            className="content-stretch flex flex-col items-start relative shrink-0"
-                            data-node-id="2:404"
-                            data-name="Container"
-                          >
-                            <div
-                              className="pill-arrow relative shrink-0 size-[21.25px]"
-                              data-node-id="2:405"
-                              data-name="SVG"
-                            >
-                              <img
-                                alt=""
-                                className="absolute block inset-0 max-w-none size-full"
-                                src={imgSvg}
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-
-                {/* CENTRAL OVERLAPPING HERO ILLUSTRATION (Bridging Hero Indigo & Cream Section) */}
-                <div
-                  className="hero-central-stage absolute content-stretch flex flex-col inset-[-1200px_0_0_0] items-start pointer-events-none"
-                  data-node-id="2:407"
-                  data-name="Container"
-                >
-                  <div
-                    className="h-[1200px] relative shrink-0 w-full"
-                    data-node-id="2:408"
-                    data-name="Container"
-                  >
-                    <div
-                      className="-translate-x-1/2 absolute bottom-[-238.53px] flex h-[717.58px] items-center justify-center left-1/2 w-[979.88px]"
-                      data-node-id="2:409"
-                    >
-                      <div className="flex-none scale-90">
-                        <div
-                          className="content-stretch flex flex-col items-start pt-[19.2px] relative"
-                          data-name="Container"
-                        >
-                          <div
-                            className="hero-central-blob absolute bottom-[-231.19px] h-[608.5px] right-[141.53px] w-[849.222px]"
-                            data-node-id="2:410"
-                            data-name="SVG"
-                          >
-                            <img
-                              alt=""
-                              className="absolute block inset-0 max-w-none size-full"
-                              src={imgSvg1}
-                            />
-                          </div>
-                          <div
-                            className="hero-central-blob absolute bottom-[-231.19px] h-[608.5px] right-[141.53px] w-[849.222px]"
-                            data-node-id="2:412"
-                            data-name="SVG"
-                          >
-                            <img
-                              alt=""
-                              className="absolute block inset-0 max-w-none size-full"
-                              src={imgSvg1}
-                            />
-                          </div>
-                          <div
-                            className="hero-central-bg-clouds absolute content-stretch flex flex-col h-[569.144px] items-center justify-center left-[21.77px] max-w-[1920px] overflow-clip top-0 w-[1023.422px]"
-                            data-node-id="2:414"
-                            data-name="hero-background-illustration.svg"
-                          >
-                            <div
-                              className="hero-clouds-float h-[569.144px] relative shrink-0 w-[1023.406px]"
-                              data-node-id="2:415"
-                              data-name="hero-background-illustration.svg"
-                            >
-                              <img
-                                alt=""
-                                className="absolute block inset-0 max-w-none size-full"
-                                src={imgHeroBackgroundIllustrationSvg}
-                              />
-                            </div>
-                          </div>
-                          <div
-                            className="hero-central-characters aspect-[1430/1022] w-[1088.76px] content-stretch flex flex-col items-start justify-center relative shrink-0"
-                            data-node-id="2:424"
-                            data-name="c-rive"
-                          >
-                            <div
-                              className="hero-central-float h-[778.111px] relative shrink-0 w-full"
-                              data-node-id="2:425"
-                              data-name="image"
-                            >
-                              <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                                <img
-                                  alt="Ilustración central Webify"
-                                  className="absolute left-0 max-w-none size-full top-0"
-                                  src={imgImage1}
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* TIMELINE STAGE INSIDE CREAM SECTION */}
-              <div
-                className="h-[6125.84px] overflow-clip relative shrink-0 w-full z-[1]"
-                data-node-id="2:426"
-                data-name="Container"
-              >
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[33.02%_84.5%_65.23%_9%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:427"
-                  data-name="music-note-1.svg"
-                >
-                  <div
-                    className="h-[107.129px] overflow-clip relative shrink-0 w-[124.8px]"
-                    data-node-id="2:428"
-                    data-name="music-note-1.svg"
-                  >
-                    <div
-                      className="absolute inset-[0_0.28%_0_0.61%]"
-                      data-node-id="2:429"
-                      data-name="Clip path group"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgClipPathGroup}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="absolute aspect-[1944.199951171875/6151.5] left-[-38.39px] right-[-38.39px] top-0 pointer-events-none"
-                  data-node-id="2:441"
-                  data-name="c-homepage-timeline"
-                >
+                <span className="font-['Inter:Medium'] font-inter font-medium text-[17px] md:text-[18.1px] text-black px-[10.6px] whitespace-nowrap">
+                  Cotizar mi web
+                </span>
+                <span className="pill-circle bg-[#626cd4] rounded-full size-[42.5px] flex items-center justify-center shrink-0">
                   <img
                     alt=""
-                    className="absolute block inset-0 max-w-none size-full"
-                    src={imgCHomepageTimeline}
+                    src={imgArrowRight}
+                    className="pill-arrow size-[21.25px]"
                   />
-                </div>
-                <div
-                  className="parallax-character absolute content-stretch flex flex-col items-start justify-center left-[-38.39px] size-[556.8px] top-[2174.67px]"
-                  data-node-id="2:446"
-                  data-name="Container"
-                >
-                  <div
-                    className="flex-[1_0_0] min-h-px relative w-full"
-                    data-node-id="2:447"
-                    data-name="image"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <img
-                        alt=""
-                        className="absolute left-0 max-w-none size-full top-0"
-                        src={imgImage2}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-character absolute content-stretch flex flex-col h-[829.7px] items-start justify-center right-0 top-[3246.69px] w-[652.8px]"
-                  data-node-id="2:448"
-                  data-name="Container"
-                >
-                  <div
-                    className="flex-[1_0_0] min-h-px relative w-full"
-                    data-node-id="2:449"
-                    data-name="image"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <img
-                        alt=""
-                        className="absolute left-0 max-w-none size-full top-0"
-                        src={imgImage3}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-character absolute content-stretch flex flex-col h-[871.95px] items-start justify-center left-[-67.19px] top-[3859.28px] w-[1084.8px]"
-                  data-node-id="2:450"
-                  data-name="Container"
-                >
-                  <div
-                    className="flex-[1_0_0] min-h-px relative w-full"
-                    data-node-id="2:451"
-                    data-name="image"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <img
-                        alt=""
-                        className="absolute left-0 max-w-none size-full top-0"
-                        src={imgImage4}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[5.98%_77%_90.78%_13%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:452"
-                  data-name="clock.svg"
-                >
-                  <div
-                    className="h-[198.61px] overflow-clip relative shrink-0 w-[191.99px]"
-                    data-node-id="2:453"
-                    data-name="clock.svg"
-                  >
-                    <div
-                      className="absolute inset-[0.2%_0_0.28%_0]"
-                      data-node-id="2:454"
-                      data-name="Clip path group"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgClipPathGroup1}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[21.61%_48%_75.23%_40%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:467"
-                  data-name="folder.svg"
-                >
-                  <div
-                    className="h-[193.48px] relative shrink-0 w-[230.376px]"
-                    data-node-id="2:468"
-                    data-name="folder.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgFolderSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="absolute content-stretch flex flex-col inset-[15%_56%_73.16%_19%] items-center justify-center max-w-[1920px] overflow-clip pointer-events-none"
-                  data-node-id="2:473"
-                  data-name="folder-shape.svg"
-                >
-                  <div
-                    className="h-[725.55px] relative shrink-0 w-[479.996px]"
-                    data-node-id="2:474"
-                    data-name="folder-shape.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgFolderShapeSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute flex inset-[19.45%_43.5%_78.42%_47.67%] items-center justify-center max-w-[1920px]"
-                  data-node-id="2:479"
-                >
-                  <div className="-rotate-[10deg] flex-none">
-                    <div
-                      className="content-stretch flex flex-col items-center justify-center overflow-clip relative size-full"
-                      data-name="plane-2.svg"
-                    >
-                      <div
-                        className="h-[105.27px] relative shrink-0 w-[153.59px]"
-                        data-node-id="2:480"
-                        data-name="plane-2.svg"
-                      >
-                        <img
-                          alt=""
-                          className="absolute block inset-0 max-w-none size-full"
-                          src={imgPlane2Svg}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[19.02%_58%_78.52%_32%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:484"
-                  data-name="sheet.svg"
-                >
-                  <div
-                    className="h-[150.53px] relative shrink-0 w-[191.993px]"
-                    data-node-id="2:485"
-                    data-name="sheet.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgSheetSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="absolute content-stretch flex flex-col inset-[26%_9%_50.92%_53%] items-center justify-center max-w-[1920px] overflow-clip pointer-events-none"
-                  data-node-id="2:489"
-                  data-name="composer-shape-2.svg"
-                >
-                  <div
-                    className="h-[1413.73px] relative shrink-0 w-[729.59px]"
-                    data-node-id="2:490"
-                    data-name="composer-shape-2.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgComposerShape2Svg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[36.43%_45%_60.89%_48%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:493"
-                  data-name="music-note-2.svg"
-                >
-                  <div
-                    className="h-[163.937px] overflow-clip relative shrink-0 w-[134.39px]"
-                    data-node-id="2:494"
-                    data-name="music-note-2.svg"
-                  >
-                    <div
-                      className="absolute inset-[0_0.45%_0.08%_0.49%]"
-                      data-node-id="2:495"
-                      data-name="Clip path group"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgClipPathGroup2}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[39.06%_40.7%_58.33%_52%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:503"
-                  data-name="music-note-3.svg"
-                >
-                  <div
-                    className="h-[159.78px] overflow-clip relative shrink-0 w-[140.142px]"
-                    data-node-id="2:504"
-                    data-name="music-note-3.svg"
-                  >
-                    <div
-                      className="absolute inset-[0_0.14%_0.51%_0]"
-                      data-node-id="2:505"
-                      data-name="Clip path group"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgClipPathGroup3}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[42%_60%_57.09%_28%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:513"
-                  data-name="trumper-shape.svg"
-                >
-                  <div
-                    className="h-[55.875px] relative shrink-0 w-[230.39px]"
-                    data-node-id="2:514"
-                    data-name="trumper-shape.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgTrumperShapeSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[47%_86%_45.99%_4%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:516"
-                  data-name="gamer-shape.svg"
-                >
-                  <div
-                    className="h-[429.52px] relative shrink-0 w-[191.997px]"
-                    data-node-id="2:517"
-                    data-name="gamer-shape.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgGamerShapeSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[55%_36%_41.67%_53%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:520"
-                  data-name="joystick-shape.svg"
-                >
-                  <div
-                    className="h-[204.05px] relative shrink-0 w-[211.178px]"
-                    data-node-id="2:521"
-                    data-name="joystick-shape.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgJoystickShapeSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[63.06%_18%_36%_79%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:525"
-                  data-name="soccer-circle.svg"
-                >
-                  <div
-                    className="relative shrink-0 size-[57.59px]"
-                    data-node-id="2:526"
-                    data-name="soccer-circle.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgSoccerCircleSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[60%_33%_38.85%_65.5%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:530"
-                  data-name="soccer-shape-1.svg"
-                >
-                  <div
-                    className="h-[70.59px] relative shrink-0 w-[28.793px]"
-                    data-node-id="2:531"
-                    data-name="soccer-shape-1.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgSoccerShape1Svg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[62.63%_44%_35.05%_48%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:533"
-                  data-name="soccer-shape-2.svg"
-                >
-                  <div
-                    className="h-[142.06px] relative shrink-0 w-[153.578px]"
-                    data-node-id="2:534"
-                    data-name="soccer-shape-2.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgSoccerShape2Svg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[66.5%_41%_30.98%_52%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:536"
-                  data-name="soccer-shape-3.svg"
-                >
-                  <div
-                    className="h-[154.11px] relative shrink-0 w-[134.39px]"
-                    data-node-id="2:537"
-                    data-name="soccer-shape-3.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgSoccerShape3Svg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[76%_62%_21.63%_26%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:539"
-                  data-name="soccer-shape-4.svg"
-                >
-                  <div
-                    className="h-[145.17px] relative shrink-0 w-[230.378px]"
-                    data-node-id="2:540"
-                    data-name="soccer-shape-4.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgSoccerShape4Svg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="absolute content-stretch flex flex-col inset-[69%_49%_25.04%_33%] items-center justify-center max-w-[1920px] overflow-clip pointer-events-none"
-                  data-node-id="2:542"
-                  data-name="soccer-trace.svg"
-                >
-                  <div
-                    className="h-[365.02px] relative shrink-0 w-[345.586px]"
-                    data-node-id="2:543"
-                    data-name="soccer-trace.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgSoccerTraceSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[68.04%_80%_31.2%_19%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:546"
-                  data-name="soccer-circle-2.svg"
-                >
-                  <div
-                    className="h-[46.41px] relative shrink-0 w-[19.183px]"
-                    data-node-id="2:547"
-                    data-name="soccer-circle-2.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgSoccerCircle2Svg}
-                    />
-                  </div>
-                </div>
-
-                {/* TIMELINE END CLOUDS, RUNNERS/CYCLIST & GREEN HILLS */}
-                <div
-                  className="absolute bottom-[-1.01px] h-[1152px] left-0 right-0"
-                  data-node-id="2:549"
-                  data-name="Container"
-                >
-                  <div
-                    className="parallax-decor absolute content-stretch flex flex-col items-center justify-center max-w-[1920px] overflow-clip right-[584px] top-0 w-[633.59px]"
-                    data-node-id="2:550"
-                    data-name="timeline_end_cloud_1.svg"
-                  >
-                    <div
-                      className="h-[127.45px] relative shrink-0 w-[633.574px]"
-                      data-node-id="2:551"
-                      data-name="timeline_end_cloud_1.svg"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgTimelineEndCloud1Svg}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="parallax-decor absolute content-stretch flex flex-col h-[45.08px] items-center justify-center left-[45.59px] max-w-[1920px] overflow-clip top-[230.39px] w-[192px]"
-                    data-node-id="2:553"
-                    data-name="timeline_end_cloud_2.svg"
-                  >
-                    <div
-                      className="h-[45.08px] relative shrink-0 w-[191.979px]"
-                      data-node-id="2:554"
-                      data-name="timeline_end_cloud_2.svg"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgTimelineEndCloud2Svg}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="parallax-decor absolute content-stretch flex flex-col h-[69.67px] items-center justify-center left-[-215.19px] max-w-[1920px] overflow-clip top-[345.59px] w-[345.59px]"
-                    data-node-id="2:556"
-                    data-name="timeline_end_cloud_3.svg"
-                  >
-                    <div
-                      className="h-[69.67px] relative shrink-0 w-[345.563px]"
-                      data-node-id="2:557"
-                      data-name="timeline_end_cloud_3.svg"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgTimelineEndCloud3Svg}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="parallax-decor absolute content-stretch flex flex-col h-[35.5px] items-center justify-center max-w-[1920px] overflow-clip right-[261.61px] top-[529.9px] w-[153.59px]"
-                    data-node-id="2:559"
-                    data-name="timeline_end_cloud_4.svg"
-                  >
-                    <div
-                      className="h-[35.5px] relative shrink-0 w-[153.538px]"
-                      data-node-id="2:560"
-                      data-name="timeline_end_cloud_4.svg"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgTimelineEndCloud4Svg}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="parallax-decor absolute content-stretch flex flex-col h-[30.22px] items-center justify-center left-[241.59px] max-w-[1920px] overflow-clip top-[564.47px] w-[96px]"
-                    data-node-id="2:562"
-                    data-name="timeline_end_cloud_5.svg"
-                  >
-                    <div
-                      className="h-[30.22px] relative shrink-0 w-[95.993px]"
-                      data-node-id="2:563"
-                      data-name="timeline_end_cloud_5.svg"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgTimelineEndCloud5Svg}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="absolute bottom-[-295.18px] content-stretch flex flex-col h-[548.56px] items-center justify-center left-0 overflow-clip w-[1920px]"
-                    data-node-id="2:565"
-                    data-name="timeline-end-green-back.svg"
-                  >
-                    <div
-                      className="h-[548.56px] relative shrink-0 w-[1919.96px]"
-                      data-node-id="2:566"
-                      data-name="timeline-end-green-back.svg"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgTimelineEndGreenBackSvg}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="parallax-character absolute bottom-[23.03px] content-stretch flex flex-col h-[925.97px] items-start justify-center right-[-163.19px] w-[1152px]"
-                    data-node-id="2:568"
-                    data-name="Container"
-                  >
-                    <div
-                      className="flex-[1_0_0] min-h-px relative w-full"
-                      data-node-id="2:569"
-                      data-name="image"
-                    >
-                      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        <img
-                          alt=""
-                          className="absolute left-0 max-w-none size-full top-0"
-                          src={imgImage5}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="parallax-character absolute bottom-[57.6px] content-stretch flex flex-col h-[975.58px] items-start justify-center left-[422.39px] w-[1036.8px]"
-                    data-node-id="2:570"
-                    data-name="Container"
-                  >
-                    <div
-                      className="flex-[1_0_0] min-h-px relative w-full"
-                      data-node-id="2:571"
-                      data-name="image"
-                    >
-                      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        <img
-                          alt=""
-                          className="absolute left-0 max-w-none size-full top-0"
-                          src={imgImage6}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="parallax-character absolute bottom-[115.19px] content-stretch flex flex-col items-start justify-center left-[-96px] size-[844.8px]"
-                    data-node-id="2:572"
-                    data-name="Container"
-                  >
-                    <div
-                      className="flex-[1_0_0] min-h-px relative w-full"
-                      data-node-id="2:573"
-                      data-name="image"
-                    >
-                      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                        <img
-                          alt=""
-                          className="absolute left-0 max-w-none size-full top-0"
-                          src={imgImage7}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="absolute bottom-[-90px] content-stretch flex flex-col items-center justify-center left-0 overflow-clip w-[1920px]"
-                    data-node-id="2:574"
-                    data-name="timeline-end-green-middle.svg"
-                  >
-                    <div
-                      className="h-[273.016px] relative shrink-0 w-[1920px]"
-                      data-node-id="2:575"
-                      data-name="timeline-end-green-middle.svg"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgTimelineEndGreenMiddleSvg}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="absolute content-stretch flex flex-col items-center justify-center left-0 overflow-clip top-[790.11px] w-[1920px]"
-                    data-node-id="2:577"
-                    data-name="timeline-end-green-front.svg"
-                  >
-                    <div
-                      className="h-[361.89px] relative shrink-0 w-[1919.922px]"
-                      data-node-id="2:578"
-                      data-name="timeline-end-green-front.svg"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgTimelineEndGreenFrontSvg}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* FEATURE CARD 1: Catálogo y agenda a WhatsApp */}
-                <div
-                  className="timeline-feature-card absolute bottom-[84.64%] content-stretch flex flex-col items-start max-w-[800px] right-[138.75px] top-[9.04%] w-[692.5px] z-[5]"
-                  data-node-id="2:625"
-                  data-name="Container"
-                >
-                  <div
-                    className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                    data-node-id="2:626"
-                    data-name="Container"
-                  >
-                    <div
-                      className="absolute bg-[#ff705d] inset-[1px_1px_1.05px_1px] rounded-[10px]"
-                      data-node-id="2:627"
-                      data-name="Background"
-                    />
-                    <div
-                      className="absolute bg-white inset-[0_0_0.05px_0] rounded-[10px]"
-                      data-node-id="2:628"
-                      data-name="Background"
-                    />
-                    <div
-                      className="content-stretch flex flex-col gap-[26.6px] items-start pb-[53.13px] pt-[52.13px] px-[53.125px] relative shrink-0 w-full"
-                      data-node-id="2:629"
-                      data-name="Container"
-                    >
-                      <div
-                        className="mali-heading-reveal content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:630"
-                        data-name="Heading 3"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[53.1px] tracking-[-1.062px] w-full"
-                          data-node-id="2:631"
-                        >
-                          <p className="leading-[61px] mb-0">
-                            {renderMaliWords("Catálogo y agenda")}
-                          </p>
-                          <p className="leading-[61px]">
-                            {renderMaliWords("a WhatsApp")}
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:632"
-                        data-name="Container"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[20.2px] tracking-[-0.807px] w-full"
-                          data-node-id="2:633"
-                        >
-                          <p className="leading-[25.23px]">
-                            Tus clientes eligen platos o servicios, agregan
-                            adiciones y salsas o seleccionan especialista. El
-                            domicilio se calcula por barrio y tú recibes el
-                            pedido o la cita lista en tu WhatsApp.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:634"
-                        data-name="Container"
-                      >
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(3300)}
-                          className="mindmarket-pill-btn border border-[rgba(0,0,0,0)] border-solid content-stretch flex gap-[8.5px] items-center min-h-[63.75px] p-[11.625px] relative rounded-[10px] shrink-0"
-                          data-node-id="2:635"
-                          data-name="Link"
-                        >
-                          <div
-                            className="absolute bg-[#ff705d] h-[63.75px] left-0 rounded-[10px] top-0 w-[224.5px]"
-                            data-node-id="2:636"
-                            data-name="Background"
-                          />
-                          <div
-                            className="relative shrink-0"
-                            data-node-id="2:637"
-                            data-name="Container"
-                          >
-                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[10.625px] relative size-full">
-                              <div
-                                className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18.1px] text-black whitespace-nowrap"
-                                data-node-id="2:638"
-                              >
-                                <p className="leading-[27px]">Cómo funciona</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="pill-circle bg-white relative rounded-[42.5px] shrink-0 size-[42.5px]"
-                            data-node-id="2:639"
-                            data-name="Background"
-                          >
-                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-                              <div
-                                className="content-stretch flex flex-col items-start relative shrink-0"
-                                data-node-id="2:640"
-                                data-name="Container"
-                              >
-                                <div
-                                  className="pill-arrow relative shrink-0 size-[21.25px]"
-                                  data-node-id="2:641"
-                                  data-name="SVG"
-                                >
-                                  <img
-                                    alt=""
-                                    className="absolute block inset-0 max-w-none size-full"
-                                    src={imgSvg}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* FEATURE CARD 2: Panel autogestionable en 10 segundos */}
-                <div
-                  className="timeline-feature-card absolute bottom-[69.73%] content-stretch flex flex-col items-start left-[138.75px] max-w-[800px] top-[23.54%] w-[692.5px] z-[5]"
-                  data-node-id="2:643"
-                  data-name="Container"
-                >
-                  <div
-                    className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                    data-node-id="2:644"
-                    data-name="Container"
-                  >
-                    <div
-                      className="absolute bg-[#f5e211] inset-[1px_1px_0.82px_1px] rounded-[10px]"
-                      data-node-id="2:645"
-                      data-name="Background"
-                    />
-                    <div
-                      className="absolute bg-white inset-[0_0_-0.18px_0] rounded-[10px]"
-                      data-node-id="2:646"
-                      data-name="Background"
-                    />
-                    <div
-                      className="h-[422.21px] relative shrink-0 w-full"
-                      data-node-id="2:647"
-                      data-name="Container"
-                    >
-                      <div
-                        className="mali-heading-reveal absolute content-stretch flex flex-col items-start left-[53.13px] right-[53.12px] top-[52.13px]"
-                        data-node-id="2:648"
-                        data-name="Heading 3"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[53.1px] tracking-[-1.062px] w-[586.25px]"
-                          data-node-id="2:649"
-                        >
-                          <p className="leading-[61px] mb-0">
-                            {renderMaliWords("Panel autogestionable")}
-                          </p>
-                          <p className="leading-[61px]">
-                            {renderMaliWords("en 10 segundos")}
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        className="absolute content-stretch flex flex-col items-start left-[53.13px] right-[53.12px] top-[200.73px]"
-                        data-node-id="2:650"
-                        data-name="Container"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[20.2px] tracking-[-0.807px] w-[586.25px]"
-                          data-node-id="2:651"
-                        >
-                          <p className="leading-[25.23px]">
-                            Cambia precios, actualiza fotos y marca productos
-                            como agotados desde el celular. Sin depender de
-                            nadie: tu catálogo y tu agenda al día, en segundos.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        className="absolute content-stretch flex flex-col items-start left-[53.13px] right-[53.12px] top-[303.33px]"
-                        data-node-id="2:652"
-                        data-name="Container"
-                      >
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(4600)}
-                          className="mindmarket-pill-btn border border-[rgba(0,0,0,0)] border-solid content-stretch flex gap-[8.5px] items-center min-h-[63.75px] p-[11.625px] relative rounded-[10px] shrink-0"
-                          data-node-id="2:653"
-                          data-name="Link"
-                        >
-                          <div
-                            className="absolute bg-[#f5e211] h-[63.75px] left-0 rounded-[10px] top-0 w-[226.5px]"
-                            data-node-id="2:654"
-                            data-name="Background"
-                          />
-                          <div
-                            className="relative shrink-0"
-                            data-node-id="2:655"
-                            data-name="Container"
-                          >
-                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[10.625px] relative size-full">
-                              <div
-                                className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18.1px] text-black whitespace-nowrap"
-                                data-node-id="2:656"
-                              >
-                                <p className="leading-[27px]">
-                                  Ver Panel Móvil
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="pill-circle bg-white relative rounded-[42.5px] shrink-0 size-[42.5px]"
-                            data-node-id="2:657"
-                            data-name="Background"
-                          >
-                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-                              <div
-                                className="content-stretch flex flex-col items-start relative shrink-0"
-                                data-node-id="2:658"
-                                data-name="Container"
-                              >
-                                <div
-                                  className="pill-arrow relative shrink-0 size-[21.25px]"
-                                  data-node-id="2:659"
-                                  data-name="SVG"
-                                >
-                                  <img
-                                    alt=""
-                                    className="absolute block inset-0 max-w-none size-full"
-                                    src={imgSvg}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* FEATURE CARD 3: Cobro local sin fricción */}
-                <div
-                  className="timeline-feature-card absolute bottom-[46.82%] content-stretch flex flex-col items-start left-[673.13px] max-w-[800px] top-[45.04%] w-[573.75px] z-[5]"
-                  data-node-id="2:661"
-                  data-name="Container"
-                >
-                  <div
-                    className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                    data-node-id="2:662"
-                    data-name="Container"
-                  >
-                    <div
-                      className="absolute bg-[#074679] inset-[1px_1px_1.52px_1px] rounded-[10px]"
-                      data-node-id="2:663"
-                      data-name="Background"
-                    />
-                    <div
-                      className="absolute bg-white inset-[0_0_0.52px_0] rounded-[10px]"
-                      data-node-id="2:664"
-                      data-name="Background"
-                    />
-                    <div
-                      className="content-stretch flex flex-col gap-[26.6px] items-start pb-[53.12px] pt-[52.175px] px-[53.125px] relative shrink-0 w-full"
-                      data-node-id="2:665"
-                      data-name="Container"
-                    >
-                      <div
-                        className="mali-heading-reveal content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:666"
-                        data-name="Heading 3"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[53.1px] tracking-[-1.062px] w-full"
-                          data-node-id="2:667"
-                        >
-                          <p className="leading-[61px] mb-0">
-                            {renderMaliWords("Cobro local")}
-                          </p>
-                          <p className="leading-[61px]">
-                            {renderMaliWords("sin fricción")}
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:668"
-                        data-name="Container"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[20.2px] tracking-[-0.807px] w-full"
-                          data-node-id="2:669"
-                        >
-                          <p className="leading-[25.23px]">
-                            Recibe pagos por Nequi, Bre-B o Daviplata. Conecta
-                            una pasarela 24/7 con Wompi, PSE y Addi para que tus
-                            clientes paguen como prefieren, sin complicaciones.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:670"
-                        data-name="Container"
-                      >
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(9403)}
-                          className="mindmarket-pill-btn border border-[rgba(0,0,0,0)] border-solid content-stretch flex gap-[8.5px] items-center min-h-[63.75px] p-[11.625px] relative rounded-[10px] shrink-0"
-                          data-node-id="2:671"
-                          data-name="Link"
-                        >
-                          <div
-                            className="absolute bg-[#074679] h-[63.75px] left-0 rounded-[10px] top-0 w-[185.5px]"
-                            data-node-id="2:672"
-                            data-name="Background"
-                          />
-                          <div
-                            className="relative shrink-0"
-                            data-node-id="2:673"
-                            data-name="Container"
-                          >
-                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[10.625px] relative size-full">
-                              <div
-                                className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18.1px] text-white whitespace-nowrap"
-                                data-node-id="2:674"
-                              >
-                                <p className="leading-[27px]">Ver planes</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="pill-circle bg-white relative rounded-[42.5px] shrink-0 size-[42.5px]"
-                            data-node-id="2:675"
-                            data-name="Background"
-                          >
-                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-                              <div
-                                className="content-stretch flex flex-col items-start relative shrink-0"
-                                data-node-id="2:676"
-                                data-name="Container"
-                              >
-                                <div
-                                  className="pill-arrow relative shrink-0 size-[21.25px]"
-                                  data-node-id="2:677"
-                                  data-name="SVG"
-                                >
-                                  <img
-                                    alt=""
-                                    className="absolute block inset-0 max-w-none size-full"
-                                    src={imgSvg}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* FEATURE CARD 4: Una web con carácter propio */}
-                <div
-                  className="timeline-feature-card absolute bottom-[25.23%] content-stretch flex flex-col items-start max-w-[800px] right-[138.75px] top-[68.04%] w-[692.5px] z-[5]"
-                  data-node-id="2:679"
-                  data-name="Container"
-                >
-                  <div
-                    className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                    data-node-id="2:680"
-                    data-name="Container"
-                  >
-                    <div
-                      className="absolute bg-[#ebc1ff] inset-[1px_1px_0.82px_1px] rounded-[10px]"
-                      data-node-id="2:681"
-                      data-name="Background"
-                    />
-                    <div
-                      className="absolute bg-white inset-[0_0_-0.18px_0] rounded-[10px]"
-                      data-node-id="2:682"
-                      data-name="Background"
-                    />
-                    <div
-                      className="h-[422.21px] relative shrink-0 w-full"
-                      data-node-id="2:683"
-                      data-name="Container"
-                    >
-                      <div
-                        className="mali-heading-reveal absolute content-stretch flex flex-col items-start left-[53.13px] right-[53.12px] top-[52.13px]"
-                        data-node-id="2:684"
-                        data-name="Heading 3"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[53.1px] tracking-[-1.062px] w-[586.25px]"
-                          data-node-id="2:685"
-                        >
-                          <p className="leading-[61px] mb-0">
-                            {renderMaliWords("Una web con")}
-                          </p>
-                          <p className="leading-[61px]">
-                            {renderMaliWords("carácter propio")}
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        className="absolute content-stretch flex flex-col items-start left-[53.13px] right-[53.12px] top-[200.73px]"
-                        data-node-id="2:686"
-                        data-name="Container"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[20.2px] tracking-[-0.807px] w-[586.25px]"
-                          data-node-id="2:687"
-                        >
-                          <p className="leading-[25.23px]">
-                            Diseñamos a medida para estudios de uñas, spas,
-                            barberías y restaurantes en Colombia. Tu identidad,
-                            tus servicios y tus platos; sin plantillas de IA. De
-                            Instagram a tu web y de ahí a tu WhatsApp.
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        className="absolute content-stretch flex flex-col items-start left-[53.13px] right-[53.12px] top-[303.33px]"
-                        data-node-id="2:688"
-                        data-name="Container"
-                      >
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(8112)}
-                          className="mindmarket-pill-btn border border-[rgba(0,0,0,0)] border-solid content-stretch flex gap-[8.5px] items-center min-h-[63.75px] p-[11.625px] relative rounded-[10px] shrink-0"
-                          data-node-id="2:689"
-                          data-name="Link"
-                        >
-                          <div
-                            className="absolute bg-[#ebc1ff] h-[63.75px] left-0 rounded-[10px] top-0 w-[184.5px]"
-                            data-node-id="2:690"
-                            data-name="Background"
-                          />
-                          <div
-                            className="relative shrink-0"
-                            data-node-id="2:691"
-                            data-name="Container"
-                          >
-                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[10.625px] relative size-full">
-                              <div
-                                className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18.1px] text-black whitespace-nowrap"
-                                data-node-id="2:692"
-                              >
-                                <p className="leading-[27px]">Ver rubros</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="pill-circle bg-white relative rounded-[42.5px] shrink-0 size-[42.5px]"
-                            data-node-id="2:693"
-                            data-name="Background"
-                          >
-                            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-                              <div
-                                className="content-stretch flex flex-col items-start relative shrink-0"
-                                data-node-id="2:694"
-                                data-name="Container"
-                              >
-                                <div
-                                  className="pill-arrow relative shrink-0 size-[21.25px]"
-                                  data-node-id="2:695"
-                                  data-name="SVG"
-                                >
-                                  <img
-                                    alt=""
-                                    className="absolute block inset-0 max-w-none size-full"
-                                    src={imgSvg}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ADDITIONAL TIMELINE CHARACTERS & VECTORS */}
-                <div
-                  className="parallax-character absolute content-stretch flex flex-col h-[883.95px] items-start justify-center right-[-96px] top-[1960.27px] w-[768px]"
-                  data-node-id="2:697"
-                  data-name="Container"
-                >
-                  <div
-                    className="flex-[1_0_0] min-h-px relative w-full"
-                    data-node-id="2:698"
-                    data-name="image"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <img
-                        alt=""
-                        className="absolute left-0 max-w-none size-full top-0"
-                        src={imgImage8}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-character absolute content-stretch flex flex-col h-[1011.34px] items-start justify-center left-[-61.44px] top-[612.58px] w-[825.59px]"
-                  data-node-id="2:699"
-                  data-name="Container"
-                >
-                  <div
-                    className="flex-[1_0_0] min-h-px relative w-full"
-                    data-node-id="2:700"
-                    data-name="image"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <img
-                        alt=""
-                        className="absolute left-0 max-w-none size-full top-0"
-                        src={imgImage9}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-character absolute content-stretch flex flex-col h-[890.22px] items-start justify-center right-[96px] top-[1163.91px] w-[864px]"
-                  data-node-id="2:701"
-                  data-name="Container"
-                >
-                  <div
-                    className="flex-[1_0_0] min-h-px relative w-full"
-                    data-node-id="2:702"
-                    data-name="image"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <img
-                        alt=""
-                        className="absolute left-0 max-w-none size-full top-0"
-                        src={imgImage10}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-character absolute content-stretch flex flex-col h-[508.55px] items-start justify-center left-[268.8px] top-[2046.03px] w-[556.8px]"
-                  data-node-id="2:703"
-                  data-name="Container"
-                >
-                  <div
-                    className="flex-[1_0_0] min-h-px relative w-full"
-                    data-node-id="2:704"
-                    data-name="image"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <img
-                        alt=""
-                        className="absolute left-0 max-w-none size-full top-0"
-                        src={imgImage11}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="parallax-character absolute content-stretch flex flex-col items-start justify-center left-[192px] size-[643.19px] top-[2738.25px]"
-                  data-node-id="2:705"
-                  data-name="Container"
-                >
-                  <div
-                    className="flex-[1_0_0] min-h-px relative w-full"
-                    data-node-id="2:706"
-                    data-name="image"
-                  >
-                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                      <img
-                        alt=""
-                        className="absolute left-0 max-w-none size-full top-0"
-                        src={imgImage12}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="absolute content-stretch flex flex-col inset-[2%_62%_88.53%_8%] items-center justify-center max-w-[1920px] overflow-clip pointer-events-none"
-                  data-node-id="2:707"
-                  data-name="clock-shape.svg"
-                >
-                  <div
-                    className="h-[580.31px] relative shrink-0 w-[575.987px]"
-                    data-node-id="2:708"
-                    data-name="clock-shape.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgClockShapeSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute flex inset-[11.83%_61.87%_85.5%_30.91%] items-center justify-center max-w-[1920px]"
-                  data-node-id="2:714"
-                >
-                  <div className="flex-none rotate-[10deg]">
-                    <div
-                      className="content-stretch flex flex-col items-center justify-center overflow-clip relative size-full"
-                      data-name="plane-1.svg"
-                    >
-                      <div
-                        className="h-[145.45px] relative shrink-0 w-[115.183px]"
-                        data-node-id="2:715"
-                        data-name="plane-1.svg"
-                      >
-                        <img
-                          alt=""
-                          className="absolute block inset-0 max-w-none size-full"
-                          src={imgPlane1Svg}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="absolute content-stretch flex flex-col inset-[9%_55%_81.91%_22%] items-center justify-center max-w-[1920px] overflow-clip pointer-events-none"
-                  data-node-id="2:720"
-                  data-name="plane-trace.svg"
-                >
-                  <div
-                    className="h-[556.609px] relative shrink-0 w-[441.59px]"
-                    data-node-id="2:721"
-                    data-name="plane-trace.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgPlaneTraceSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="absolute content-stretch flex flex-col inset-[23.06%_9%_53.86%_53%] items-center justify-center max-w-[1920px] overflow-clip pointer-events-none"
-                  data-node-id="2:724"
-                  data-name="composer-shape.svg"
-                >
-                  <div
-                    className="h-[1413.73px] relative shrink-0 w-[729.59px]"
-                    data-node-id="2:725"
-                    data-name="composer-shape.svg"
-                  >
-                    <img
-                      alt=""
-                      className="absolute block inset-0 max-w-none size-full"
-                      src={imgComposerShapeSvg}
-                    />
-                  </div>
-                </div>
-                <div
-                  className="parallax-decor absolute content-stretch flex flex-col inset-[52.56%_53%_44.7%_40%] items-center justify-center max-w-[1920px] overflow-clip"
-                  data-node-id="2:729"
-                  data-name="joystick.svg"
-                >
-                  <div
-                    className="h-[167.55px] overflow-clip relative shrink-0 w-[134.389px]"
-                    data-node-id="2:730"
-                    data-name="joystick.svg"
-                  >
-                    <div
-                      className="absolute inset-[0_0.53%_0_0]"
-                      data-node-id="2:731"
-                      data-name="Clip path group"
-                    >
-                      <img
-                        alt=""
-                        className="absolute block inset-0 max-w-none size-full"
-                        src={imgClipPathGroup4}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+                </span>
+              </button>
             </div>
 
-            {/* BLOCK 4: PLANS SECTION ("Elige el plan para tu negocio y empieza hoy") */}
-            <div
-              id="planes"
-              className="card-stack-block card-stack-overlap absolute bg-[#f5f1e4] content-stretch flex flex-col items-start left-0 pb-[170px] pt-[136px] px-[138.75px] right-0 rounded-[50px] top-[9403.05px] z-[15]"
-              data-node-id="2:748"
-              data-name="Background"
-            >
-              <div className="card-stack-overlay absolute inset-0 rounded-[50px] bg-[#2c2e2a] opacity-0 pointer-events-none" />
-              <div
-                className="gap-x-[20px] gap-y-[20px] grid grid-cols-[repeat(14,minmax(0,1fr))] grid-rows-[2160px] relative shrink-0 w-full z-[2]"
-                data-node-id="2:749"
-                data-name="Container"
-              >
-                <div
-                  className="col-[1/span_8] content-stretch flex flex-col items-start justify-self-stretch pb-[1560px] relative row-1 self-start shrink-0"
-                  data-node-id="2:750"
-                  data-name="Container"
-                >
-                  <div
-                    className="content-stretch flex flex-col gap-[278.445px] items-start min-h-[600px] relative shrink-0 w-full"
-                    data-node-id="2:751"
-                    data-name="Container"
-                  >
-                    <div
-                      className="mali-heading-reveal h-[265px] max-w-[743.75px] relative shrink-0 w-[743.75px]"
-                      data-node-id="2:752"
-                      data-name="Heading 2"
-                    >
-                      <div
-                        className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] left-0 not-italic text-[#2c2e2a] text-[80.8px] top-[38.5px] tracking-[-1.616px] w-[743.75px]"
-                        data-node-id="2:753"
-                      >
-                        <p className="leading-[76.71px]">
-                          {renderMaliWords("Elige el plan")}
-                        </p>
-                      </div>
-                      <div
-                        className="absolute h-[77px] left-0 top-[88px] w-[743.75px]"
-                        data-node-id="2:754"
-                        data-name="Strong"
-                      >
-                        <div
-                          className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] left-0 not-italic text-[#2c2e2a] text-[80.8px] top-[38.5px] tracking-[-1.616px] w-[743.75px]"
-                          data-node-id="2:755"
-                        >
-                          <p className="leading-[76.71px]">
-                            {renderMaliWords("para tu negocio")}
-                          </p>
-                        </div>
-                        <div
-                          className="absolute h-[20px] left-[273px] top-[76px] w-[260.45px]"
-                          data-node-id="2:756"
-                          data-name="Mask Group"
-                        >
-                          <div
-                            className="absolute bg-[#ebc1ff] h-[20px] left-0 top-0 w-[260.45px]"
-                            data-node-id="2:760"
-                            style={{
-                              maskImage: `url("${imgBackground1}")`,
-                              WebkitMaskImage: `url("${imgBackground1}")`,
-                              maskSize: "260.45px 20px",
-                              WebkitMaskSize: "260.45px 20px",
-                              maskRepeat: "no-repeat",
-                              WebkitMaskRepeat: "no-repeat",
-                            }}
-                            data-name="Background"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] left-0 not-italic text-[#2c2e2a] text-[80.8px] top-[214.5px] tracking-[-1.616px] w-[743.75px]"
-                        data-node-id="2:761"
-                      >
-                        <p className="leading-[76.71px]">
-                          {renderMaliWords("y empieza hoy")}
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                      data-node-id="2:762"
-                      data-name="Container"
-                    >
-                      <div
-                        className="[word-break:break-word] flex flex-col font-['Mali:Medium'] font-mali font-medium h-[349px] justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[30px] tracking-[2px] w-[869px]"
-                        data-node-id="2:763"
-                      >
-                        <p className="leading-[40px] mb-0">
-                          Diseño a medida para negocios en Colombia.
-                        </p>
-                        <p className="leading-[40px] mb-0">
-                          Empieza con el abono del 50% y elige las funciones
-                        </p>
-                        <p className="leading-[40px]">
-                          que necesitas: WhatsApp, panel móvil o cobros 24/7.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="col-[10/span_5] h-[2160px] justify-self-stretch relative row-1 shrink-0"
-                  data-node-id="2:764"
-                  data-name="Margin"
-                >
-                  <div
-                    className="absolute content-stretch flex flex-col gap-[59.5px] items-start left-0 pt-[399.5px] right-0 top-0"
-                    data-node-id="2:765"
-                    data-name="Container"
-                  >
-                    {/* PLAN CARD 01: Webify Go */}
-                    <div
-                      onClick={() => openQuoteWhatsApp("Webify Go", "$300.000")}
-                      className="plan-stack-card content-stretch flex flex-col items-start relative shrink-0 w-[573.75px] cursor-pointer transition-transform duration-300 hover:-translate-y-1"
-                      data-node-id="2:766"
-                      data-name="Container:css-transform"
-                    >
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:767"
-                        data-name="Container"
-                      >
-                        <div
-                          className="bg-white h-[550px] min-h-[550px] relative rounded-[50px] shrink-0 w-full shadow-[0_14px_40px_rgba(7,70,121,0.06)]"
-                          data-node-id="2:768"
-                          data-name="01 / Webify Go"
-                        >
-                          <div
-                            className="absolute content-stretch flex items-start justify-end left-[34px] right-[34px] top-[34px]"
-                            data-node-id="2:769"
-                            data-name="Container"
-                          >
-                            <div
-                              className="bg-[#074679] content-stretch flex items-center justify-center relative rounded-[63.75px] shrink-0 size-[63.75px]"
-                              data-node-id="2:770"
-                              data-name="Background"
-                            >
-                              <div
-                                className="content-stretch flex flex-col items-start relative shrink-0"
-                                data-node-id="2:771"
-                                data-name="Container"
-                              >
-                                <div
-                                  className="relative shrink-0 size-[63.75px]"
-                                  data-node-id="2:772"
-                                  data-name="SVG"
-                                >
-                                  <img
-                                    alt=""
-                                    className="absolute block inset-0 max-w-none size-full"
-                                    src={imgSvg2}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="absolute content-stretch flex flex-col h-[100px] items-start left-[34px] right-[34px] top-[117px]"
-                            data-node-id="2:774"
-                            data-name="Container"
-                          >
-                            <div
-                              className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-inter font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#074679] text-[80.8px] tracking-[-4.848px] w-full"
-                              data-node-id="2:775"
-                            >
-                              <p className="leading-[96px]">$300.000</p>
-                            </div>
-                          </div>
-                          <div
-                            className="absolute h-[285px] left-[34px] right-[34px] top-[232px]"
-                            data-node-id="2:776"
-                            data-name="Container"
-                          >
-                            <div
-                              className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] left-[0.5px] not-italic text-[#074679] text-[28px] top-[71.95px] tracking-[-0.807px] w-[505.75px]"
-                              data-node-id="2:777"
-                            >
-                              <p className="leading-[40px] mb-0">
-                                Ideal para uñas, barberías y carta fija.
-                              </p>
-                              <p className="leading-[40px] mb-0">
-                                Hasta 15 ítems.
-                              </p>
-                              <p className="leading-[40px] mb-0">
-                                Pedido o cita a WhatsApp.
-                              </p>
-                              <p className="leading-[40px]">
-                                Cobro con Nequi y Bre-B.
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Extra_Bold'] font-inter font-extrabold justify-center leading-[0] left-[34px] not-italic text-[#074679] text-[40px] top-[62px] tracking-[-0.807px] w-[400px]"
-                            data-node-id="5:7"
-                          >
-                            <p className="leading-[36px]">Webify Go</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* PLAN CARD 02: Webify Pro */}
-                    <div
-                      onClick={() => openQuoteWhatsApp("Webify Pro", "$650.000")}
-                      className="plan-stack-card content-stretch flex flex-col items-start relative shrink-0 w-[573.75px] cursor-pointer transition-transform duration-300 hover:-translate-y-1"
-                      data-node-id="2:778"
-                      data-name="Container:css-transform"
-                    >
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:779"
-                        data-name="Container"
-                      >
-                        <div
-                          className="bg-[#626cd4] h-[550.76px] min-h-[550px] relative rounded-[50px] shrink-0 w-full shadow-[0_14px_40px_rgba(98,108,212,0.18)]"
-                          data-node-id="2:780"
-                          data-name="02 / Webify Pro"
-                        >
-                          <div
-                            className="absolute content-stretch flex items-start justify-end left-[34px] right-[34px] top-[34px]"
-                            data-node-id="2:781"
-                            data-name="Container"
-                          >
-                            <div
-                              className="bg-white content-stretch flex items-center justify-center relative rounded-[63.75px] shrink-0 size-[63.75px]"
-                              data-node-id="2:782"
-                              data-name="Background"
-                            >
-                              <div
-                                className="content-stretch flex flex-col items-start relative shrink-0"
-                                data-node-id="2:783"
-                                data-name="Container"
-                              >
-                                <div
-                                  className="relative shrink-0 size-[63.75px]"
-                                  data-node-id="2:784"
-                                  data-name="SVG"
-                                >
-                                  <img
-                                    alt=""
-                                    className="absolute block inset-0 max-w-none size-full"
-                                    src={imgSvg3}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="absolute content-stretch flex flex-col h-[100px] items-start left-[34px] right-[34px] top-[117px]"
-                            data-node-id="2:786"
-                            data-name="Container"
-                          >
-                            <div
-                              className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-inter font-normal justify-center leading-[0] not-italic relative shrink-0 text-[80.8px] text-white tracking-[-4.848px] w-full"
-                              data-node-id="2:787"
-                            >
-                              <p className="leading-[96px]">$650.000</p>
-                            </div>
-                          </div>
-                          <div
-                            className="absolute h-[285px] left-[34px] right-[34px] top-[232px]"
-                            data-node-id="2:788"
-                            data-name="Container"
-                          >
-                            <div
-                              className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] left-[-0.5px] not-italic text-[28px] text-white top-[80.19px] tracking-[-0.807px] w-[505.75px]"
-                              data-node-id="2:789"
-                            >
-                              <p className="leading-[40px] mb-0">
-                                Panel Autogestionable desde el celular.
-                              </p>
-                              <p className="leading-[40px] mb-0">
-                                Hasta 50 ítems con filtros.
-                              </p>
-                              <p className="leading-[40px] mb-0">
-                                Adiciones o elección de especialistas.
-                              </p>
-                              <p className="leading-[40px]">
-                                Envío calculado por barrio.
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Extra_Bold'] font-inter font-extrabold justify-center leading-[0] left-[34px] not-italic text-[40px] text-white top-[62px] tracking-[-0.807px] w-[400px]"
-                            data-node-id="5:8"
-                          >
-                            <p className="leading-[36px]">Webify Pro</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* PLAN CARD 03: Webify Max */}
-                    <div
-                      onClick={() =>
-                        openQuoteWhatsApp("Webify Max", "$1.100.000")
-                      }
-                      className="plan-stack-card content-stretch flex flex-col items-start relative shrink-0 w-[573.75px] cursor-pointer transition-transform duration-300 hover:-translate-y-1"
-                      data-node-id="2:790"
-                      data-name="Container:css-transform"
-                    >
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                        data-node-id="2:791"
-                        data-name="Container"
-                      >
-                        <div
-                          className="bg-[#ff705d] h-[550.76px] min-h-[550px] relative rounded-[50px] shrink-0 w-full shadow-[0_14px_40px_rgba(255,112,93,0.18)]"
-                          data-node-id="2:792"
-                          data-name="03 / Webify Max"
-                        >
-                          <div
-                            className="absolute content-stretch flex items-start justify-end left-[34px] right-[34px] top-[34px]"
-                            data-node-id="2:793"
-                            data-name="Container"
-                          >
-                            <div
-                              className="bg-white content-stretch flex items-center justify-center relative rounded-[63.75px] shrink-0 size-[63.75px]"
-                              data-node-id="2:794"
-                              data-name="Background"
-                            >
-                              <div
-                                className="content-stretch flex flex-col items-start relative shrink-0"
-                                data-node-id="2:795"
-                                data-name="Container"
-                              >
-                                <div
-                                  className="relative shrink-0 size-[63.75px]"
-                                  data-node-id="2:796"
-                                  data-name="SVG"
-                                >
-                                  <img
-                                    alt=""
-                                    className="absolute block inset-0 max-w-none size-full"
-                                    src={imgSvg4}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="absolute content-stretch flex flex-col h-[100px] items-start left-[34px] right-[34px] top-[117px]"
-                            data-node-id="2:798"
-                            data-name="Container"
-                          >
-                            <div
-                              className="[word-break:break-word] flex flex-col font-['Inter:Regular'] font-inter font-normal justify-center leading-[0] not-italic relative shrink-0 text-[80.8px] text-white tracking-[-4.848px] w-full"
-                              data-node-id="2:799"
-                            >
-                              <p className="leading-[96px]">$1.100.000</p>
-                            </div>
-                          </div>
-                          <div
-                            className="absolute h-[285px] left-[34px] right-[34px] top-[232px]"
-                            data-node-id="2:800"
-                            data-name="Container"
-                          >
-                            <div
-                              className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] left-0 not-italic text-[28px] text-white top-[114px] tracking-[-0.807px] w-[505.75px]"
-                              data-node-id="2:801"
-                            >
-                              <p className="leading-[40px] mb-0">
-                                Todo lo de Pro + pasarela
-                              </p>
-                              <p className="leading-[40px] mb-0">
-                                Wompi / Bold / MercadoPago
-                              </p>
-                              <p className="leading-[40px] mb-0">
-                                (PSE, Nequi y Addi). Multi-sede,
-                              </p>
-                              <p className="leading-[40px] mb-0">
-                                inventario automático y
-                              </p>
-                              <p className="leading-[40px]">
-                                SEO en Google Maps.
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Extra_Bold'] font-inter font-extrabold justify-center leading-[0] left-[34px] not-italic text-[40px] text-white top-[62px] tracking-[-0.807px] w-[400px]"
-                            data-node-id="5:9"
-                          >
-                            <p className="leading-[36px]">Webify Max</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* BLOCK 5: YELLOW FOOTER ("Hablemos de tu web") */}
-            <div
-              className="card-stack-overlap absolute bg-[#f5e211] content-stretch flex flex-col gap-[335.49px] items-start left-0 min-h-[1200px] overflow-clip pb-[38.25px] pt-[136px] right-0 rounded-[50px] top-[11869.05px] z-[20]"
-              data-node-id="2:320"
-              data-name="Footer"
-            >
-              <div
-                className="content-stretch flex flex-col items-start px-[138.75px] relative shrink-0 w-full"
-                data-node-id="2:321"
-                data-name="Container"
-              >
-                <div
-                  className="gap-x-[20px] gap-y-[85px] grid grid-cols-[repeat(14,minmax(0,1fr))] grid-rows-[217.42px] relative shrink-0 w-full"
-                  data-node-id="2:322"
-                  data-name="Container"
-                >
-                  <div
-                    className="col-[1/span_4] content-stretch flex flex-col gap-[25.51px] items-start relative row-1 self-start shrink-0 w-[455px]"
-                    data-node-id="2:323"
-                    data-name="Container"
-                  >
-                    <div
-                      className="content-stretch flex flex-col items-start max-w-[450px] relative shrink-0 w-[450px]"
-                      data-node-id="2:324"
-                      data-name="Container"
-                    >
-                      <div
-                        className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[-0.807px] w-[859px]"
-                        data-node-id="2:325"
-                      >
-                        <p className="leading-[40px] mb-0">
-                          ¿Tu negocio está en Instagram? Dale una web
-                        </p>
-                        <p className="leading-[40px] mb-0">
-                          con identidad propia. Cuéntanos qué ofreces
-                        </p>
-                        <p className="leading-[40px] mb-0">
-                          y diseñamos tu catálogo o agenda para que
-                        </p>
-                        <p className="leading-[40px]">
-                          tus clientes elijan y te escriban a WhatsApp.
-                        </p>
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => openQuoteWhatsApp()}
-                      className="mindmarket-pill-btn border border-[rgba(0,0,0,0)] border-solid content-stretch flex gap-[8.49px] items-center min-h-[63.75px] p-[11.625px] relative rounded-[10px] shrink-0"
-                      data-node-id="2:326"
-                      data-name="Link"
-                    >
-                      <div
-                        className="absolute bg-white h-[63.75px] left-0 rounded-[10px] top-0 w-[223.49px]"
-                        data-node-id="2:327"
-                        data-name="Background"
-                      />
-                      <div
-                        className="relative shrink-0"
-                        data-node-id="2:328"
-                        data-name="Container"
-                      >
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[10.625px] relative size-full">
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[18.1px] text-black whitespace-nowrap"
-                            data-node-id="2:329"
-                          >
-                            <p className="leading-[30px]">Cotizar mi web</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="pill-circle bg-[#f5e211] relative rounded-[42.5px] shrink-0 size-[42.5px]"
-                        data-node-id="2:330"
-                        data-name="Background"
-                      >
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center relative size-full">
-                          <div
-                            className="content-stretch flex flex-col items-start relative shrink-0"
-                            data-node-id="2:331"
-                            data-name="Container"
-                          >
-                            <div
-                              className="pill-arrow relative shrink-0 size-[21.25px]"
-                              data-node-id="2:332"
-                              data-name="SVG"
-                            >
-                              <img
-                                alt=""
-                                className="absolute block inset-0 max-w-none size-full"
-                                src={imgSvg}
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-                  </div>
-                  <div
-                    className="col-[10/span_4] content-stretch flex flex-col items-start pb-[0.67px] relative row-1 self-start shrink-0 w-[455px]"
-                    data-node-id="2:334"
-                    data-name="Container"
-                  >
-                    <div
-                      className="content-stretch flex gap-[20px] h-[501px] items-end justify-center relative shrink-0 w-[674px]"
-                      data-node-id="2:335"
-                      data-name="Nav"
-                    >
-                      <div
-                        className="content-stretch flex flex-col gap-[5.4px] h-[501px] items-start relative shrink-0 w-[252px]"
-                        data-node-id="2:336"
-                        data-name="List"
-                      >
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(2400)}
-                          className="content-stretch flex flex-col items-start relative shrink-0 w-full text-left hover:opacity-70 transition-opacity"
-                          data-node-id="2:337"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] w-full"
-                            data-node-id="2:338"
-                          >
-                            <p className="leading-[40px]">Cómo funciona</p>
-                          </div>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(3300)}
-                          className="content-stretch flex flex-col items-start relative shrink-0 w-full text-left hover:opacity-70 transition-opacity"
-                          data-node-id="2:339"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] w-full"
-                            data-node-id="2:340"
-                          >
-                            <p className="leading-[40px]">Panel Móvil</p>
-                          </div>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(6000)}
-                          className="content-stretch flex flex-col items-start relative shrink-0 w-full text-left hover:opacity-70 transition-opacity"
-                          data-node-id="2:341"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] w-full"
-                            data-node-id="2:342"
-                          >
-                            <p className="leading-[40px]">Rubros</p>
-                          </div>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(4600)}
-                          className="content-stretch flex flex-col items-start relative shrink-0 w-full text-left hover:opacity-70 transition-opacity"
-                          data-node-id="2:343"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] w-full"
-                            data-node-id="2:344"
-                          >
-                            <p className="leading-[40px]">Cobros locales</p>
-                          </div>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(9403)}
-                          className="content-stretch flex flex-col items-start relative shrink-0 w-full text-left hover:opacity-70 transition-opacity"
-                          data-node-id="2:345"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] w-full"
-                            data-node-id="2:346"
-                          >
-                            <p className="leading-[40px]">Planes</p>
-                          </div>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => openQuoteWhatsApp()}
-                          className="content-stretch flex flex-col items-start relative shrink-0 w-full text-left hover:opacity-70 transition-opacity"
-                          data-node-id="2:347"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] w-full"
-                            data-node-id="2:348"
-                          >
-                            <p className="leading-[40px]">WhatsApp</p>
-                          </div>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => scrollToY(0)}
-                          className="content-stretch flex flex-col items-start relative shrink-0 w-full text-left hover:opacity-70 transition-opacity"
-                          data-node-id="2:349"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] w-full"
-                            data-node-id="2:350"
-                          >
-                            <p className="leading-[40px]">Sobre Webify</p>
-                          </div>
-                        </button>
-                      </div>
-                      <div
-                        className="h-[501px] relative shrink-0 w-[336px]"
-                        data-node-id="2:351"
-                        data-name="List"
-                      >
-                        <div
-                          className="absolute content-stretch flex flex-col items-start left-[-2.5px] right-[3px] top-[39.95px]"
-                          data-node-id="2:352"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] whitespace-nowrap"
-                            data-node-id="2:353"
-                          >
-                            <p className="leading-[50px]">Ideas para tu web</p>
-                          </div>
-                        </div>
-                        <div
-                          className="absolute content-stretch flex flex-col items-start left-[0.5px] right-0 top-[-0.05px]"
-                          data-node-id="2:354"
-                          data-name="Item"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] whitespace-nowrap"
-                            data-node-id="2:355"
-                          >
-                            <p className="leading-[40px]">Contacto</p>
-                          </div>
-                        </div>
-                        <div
-                          className="absolute content-stretch flex flex-col items-start left-0 right-[0.5px] top-[95.63px]"
-                          data-node-id="2:358"
-                          data-name="Item"
-                        >
-                          <div
-                            className="content-stretch flex flex-col items-start relative shrink-0 w-[335.5px]"
-                            data-node-id="2:356"
-                            data-name="Item"
-                          >
-                            <div
-                              className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] tracking-[2px] whitespace-nowrap"
-                              data-node-id="2:357"
-                            >
-                              <p className="leading-[50px]">
-                                Política de privacidad
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] left-[-2.5px] not-italic text-[#2c2e2a] text-[25px] top-[170.95px] tracking-[2px] whitespace-nowrap"
-                          data-node-id="2:359"
-                        >
-                          <p className="leading-[50px]">
-                            Preferencias de cookies
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="content-stretch flex flex-col items-start px-[138.75px] relative shrink-0 w-full"
-                data-node-id="2:360"
-                data-name="Container"
-              >
-                <div
-                  className="content-stretch flex flex-col gap-[59.5px] items-start relative shrink-0 w-full"
-                  data-node-id="2:361"
-                  data-name="Container"
-                >
-                  <div
-                    className="gap-x-[20px] gap-y-[59.5px] grid grid-cols-[repeat(14,minmax(0,1fr))] grid-rows-[353.84px] pt-[34px] relative shrink-0 w-full"
-                    data-node-id="2:362"
-                    data-name="Container"
-                  >
-                    <div
-                      className="col-[1/span_7] content-stretch flex flex-col items-start relative row-1 self-start shrink-0 w-[950px]"
-                      data-node-id="2:363"
-                      data-name="Container"
-                    >
-                      <div
-                        className="mali-heading-reveal content-stretch flex flex-col gap-[0.92px] items-start relative shrink-0 w-[950px]"
-                        data-node-id="2:364"
-                        data-name="Container"
-                      >
-                        <div
-                          className="[word-break:break-word] flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[186.2px] tracking-[-3.724px] w-[950px]"
-                          data-node-id="2:365"
-                        >
-                          <p className="leading-[190px]">
-                            {renderMaliWords("Hablemos")}
-                          </p>
-                        </div>
-                        <div
-                          className="h-[180px] relative shrink-0 w-[930px]"
-                          data-node-id="2:366"
-                          data-name="Mispelled"
-                        >
-                          <div
-                            className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Mali:Medium'] font-mali font-medium justify-center leading-[0] left-0 not-italic text-[#2c2e2a] text-[186.2px] top-[87.5px] tracking-[-3.724px] w-[930px]"
-                            data-node-id="2:367"
-                          >
-                            <p className="leading-[176.93px]">
-                              {renderMaliWords("de tu web")}
-                            </p>
-                          </div>
-                          <div
-                            className="absolute h-[46px] left-[14.89px] top-[160.92px] w-[669.61px]"
-                            data-node-id="2:368"
-                            data-name="Mask Group"
-                          >
-                            <div
-                              className="absolute bg-[#626cd4] h-[46px] left-0 top-0 w-[669.61px]"
-                              data-node-id="2:372"
-                              style={{
-                                maskImage: `url("${imgBackground}")`,
-                                WebkitMaskImage: `url("${imgBackground}")`,
-                                maskSize: "669.61px 46px",
-                                WebkitMaskSize: "669.61px 46px",
-                                maskRepeat: "no-repeat",
-                                WebkitMaskRepeat: "no-repeat",
-                              }}
-                              data-name="Background"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="col-[10/span_4] content-stretch flex flex-col items-start justify-self-stretch pb-[73.87px] relative row-1 self-start shrink-0"
-                      data-node-id="2:373"
-                      data-name="Container"
-                    >
-                      <div
-                        className="content-stretch flex flex-col gap-[17.1px] items-start relative shrink-0 w-full"
-                        data-node-id="2:374"
-                        data-name="Container"
-                      >
-                        <div
-                          className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Medium'] font-inter font-medium items-start leading-[0] not-italic pb-[0.655px] relative shrink-0 text-[25px] w-full whitespace-nowrap"
-                          data-node-id="2:375"
-                          data-name="Paragraph"
-                        >
-                          <div
-                            className="flex flex-col justify-center mb-[-0.795px] relative shrink-0 text-[#2c2e2a]"
-                            data-node-id="2:376"
-                          >
-                            <p className="leading-[35px]">Colombia</p>
-                          </div>
-                          <div
-                            className="flex flex-col justify-center relative shrink-0 text-[rgba(44,46,42,0.6)]"
-                            data-node-id="2:377"
-                          >
-                            <p className="leading-[35px] mb-0">
-                              Diseño web para negocios locales.
-                            </p>
-                            <p className="leading-[35px] mb-0">
-                              Estudios de uñas, spas, barberías
-                            </p>
-                            <p className="leading-[35px]">y restaurantes.</p>
-                          </div>
-                        </div>
-                        <div
-                          className="[word-break:break-word] content-stretch flex flex-col font-['Inter:Medium'] font-inter font-medium items-start leading-[0] not-italic pb-[0.655px] relative shrink-0 text-[25px] w-full whitespace-nowrap"
-                          data-node-id="2:378"
-                          data-name="Paragraph"
-                        >
-                          <div
-                            className="flex flex-col justify-center mb-[-0.795px] relative shrink-0 text-[#2c2e2a]"
-                            data-node-id="2:379"
-                          >
-                            <p className="leading-[35px]">
-                              Tu negocio, conectado
-                            </p>
-                          </div>
-                          <div
-                            className="flex flex-col justify-center relative shrink-0 text-[rgba(44,46,42,0.6)]"
-                            data-node-id="2:380"
-                          >
-                            <p className="leading-[35px] mb-0">
-                              De Instagram a tu página web.
-                            </p>
-                            <p className="leading-[35px] mb-0">
-                              De tu catálogo o agenda
-                            </p>
-                            <p className="leading-[35px]">
-                              al WhatsApp de tu negocio.
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          className="content-stretch flex flex-col items-start relative shrink-0 w-full"
-                          data-node-id="2:381"
-                          data-name="Container"
-                        >
-                          <div
-                            className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[25px] w-full"
-                            data-node-id="2:382"
-                          >
-                            <p className="leading-[35px]">Webify.co</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="gap-x-[20px] gap-y-[20px] grid grid-cols-[repeat(14,minmax(0,1fr))] grid-rows-[25.50px] relative shrink-0 w-full"
-                    data-node-id="2:383"
-                    data-name="Container"
-                  >
-                    <div
-                      className="col-[1/span_7] content-stretch flex flex-col items-start relative row-1 self-start shrink-0 w-[811.25px]"
-                      data-node-id="2:384"
-                      data-name="Container"
-                    >
-                      <div
-                        className="[word-break:break-word] flex flex-col font-['Inter:Medium'] font-inter font-medium justify-center leading-[0] not-italic relative shrink-0 text-[#2c2e2a] text-[17px] whitespace-nowrap"
-                        data-node-id="2:385"
-                      >
-                        <p className="leading-[25.5px]">
-                          © 2026 Webify. Todos los derechos reservados.
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      className="col-[10/span_3] content-stretch flex flex-col items-start justify-self-stretch pb-[2px] relative row-1 self-start shrink-0"
-                      data-node-id="2:386"
-                      data-name="Container"
-                    >
-                      <div
-                        className="h-[23.5px] relative shrink-0 w-full"
-                        data-node-id="2:387"
-                        data-name="Link"
-                      />
-                    </div>
-                    <div
-                      className="col-[13/span_2] content-center flex flex-wrap h-[25.5px] items-center justify-end justify-self-stretch pb-px relative row-1 shrink-0"
-                      data-node-id="2:389"
-                      data-name="Container"
-                    >
-                      <div
-                        className="content-stretch flex flex-col items-start relative shrink-0"
-                        data-node-id="2:390"
-                        data-name="List"
-                      >
-                        <div
-                          className="h-[26px] relative shrink-0 w-[82px]"
-                          data-node-id="2:391"
-                          data-name="Item"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* 3 Bottom Feature Badges */}
+            <div className="w-full pt-8 md:pt-[110px] grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 text-center">
+              <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[17px] md:text-[18.1px] tracking-[-0.72px]">
+                Diseño con carácter propio
+              </p>
+              <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[17px] md:text-[18.1px] tracking-[-0.72px]">
+                Control desde tu celular
+              </p>
+              <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[17px] md:text-[18.1px] tracking-[-0.72px]">
+                Pedidos y citas a WhatsApp
+              </p>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Hidden Preloader Mask Node from Figma (height=0 mask) */}
-        <div
-          className="absolute h-[1250px] left-0 top-0 w-[1920px] pointer-events-none opacity-0"
-          data-node-id="2:870"
-          data-name="Mask Group"
-        >
-          <div
-            className="absolute bg-[#f5f1e4] content-stretch flex h-[1250px] items-center justify-center left-[94px] pb-[478.43px] pt-[434.47px] top-[54px] w-[1920px]"
-            data-node-id="2:873"
-            style={{ maskImage: `url("${imgBackground2}")` }}
-            data-name="Background"
-          >
-            <div
-              className="content-stretch flex flex-col items-start pb-[43.97px] relative shrink-0"
-              data-node-id="2:874"
-              data-name="Container"
+      {/* =====================================================================
+          BLOCK 4: STICKY CARD STACK PLANS SECTION
+          ("Elige el plan para tu negocio y empieza hoy")
+         ===================================================================== */}
+      <section
+        id="planes"
+        className="relative z-[15] w-full bg-[#f5f1e4] rounded-[36px] md:rounded-[50px] py-[80px] md:py-[136px] px-0 md:px-10 lg:px-[100px] xl:px-[138px]"
+      >
+        <div className="max-w-[1642px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+          {/* Left Sticky Column: Headline + Lilac Wavy Underline + Copy */}
+          <div className="w-[92%] md:w-full mx-auto lg:col-span-7 lg:sticky lg:top-[110px] flex flex-col gap-[36px] md:gap-[72px] lg:gap-[160px] self-start">
+            <div className="mali-heading-reveal relative max-w-[744px]">
+              <h2 className="font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[44px] sm:text-[58px] md:text-[72px] xl:text-[80.8px] leading-[1.04] md:leading-[0.96] tracking-[-0.02em]">
+                <span className="block">
+                  {renderMaliWords("Elige el plan")}
+                </span>
+                <span className="relative inline-block">
+                  {renderMaliWords("para tu negocio")}
+                  {/* Lilac Wavy Underline Mask */}
+                  <span
+                    aria-hidden="true"
+                    className="block h-[14px] md:h-[20px] w-[160px] md:w-[260px] bg-[#ebc1ff] mt-1 ml-auto mr-6"
+                    style={{
+                      maskImage: `url("${imgWaveLilac}")`,
+                      WebkitMaskImage: `url("${imgWaveLilac}")`,
+                      maskSize: "100% 100%",
+                      WebkitMaskSize: "100% 100%",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
+                    }}
+                  />
+                </span>
+                <span className="block">
+                  {renderMaliWords("y empieza hoy")}
+                </span>
+              </h2>
+            </div>
+
+            <div className="max-w-[680px]">
+              <p className="font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[21px] sm:text-[24px] md:text-[28px] xl:text-[30px] leading-[1.35] md:leading-[40px] tracking-[0.04em]">
+                Diseño a medida para negocios en Colombia. Empieza con el abono
+                del 50% y elige las funciones que necesitas: WhatsApp, panel
+                móvil o cobros 24/7.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column: Interactive Sticky Card Stack (Webify Go, Webify Pro, Webify Max) */}
+          <div className="w-[92%] md:w-full mx-auto lg:col-span-5 flex flex-col gap-[120px] md:gap-[160px] pb-[40px]">
+            {/* 01 / Webify Go — sticky top: 110px, z-index: 10 */}
+            <article
+              onClick={() => openQuoteWhatsApp("Webify Go", "$300.000")}
+              style={{ position: "sticky", top: "110px", zIndex: 10 }}
+              className="plan-stack-card sticky top-[110px] z-[10] w-full bg-white text-[#074679] rounded-[36px] md:rounded-[50px] p-[28px] sm:p-[34px] min-h-[430px] md:min-h-[520px] shadow-[0_18px_48px_rgba(7,70,121,0.09)] border border-[#074679]/10 cursor-pointer transition-transform duration-300 hover:-translate-y-1 flex flex-col justify-between"
             >
-              <div
-                className="h-[293.13px] overflow-clip relative shrink-0 w-[340px]"
-                data-node-id="2:875"
-                data-name="SVG"
-              >
-                <div
-                  className="absolute inset-[289.83%_4.98%_-283.06%_4.79%]"
-                  data-node-id="2:876"
-                  data-name="Layer_1"
-                >
-                  <div className="absolute inset-[0_-5.3%_-5.95%_-5.3%]">
+              <div>
+                {/* Top Header Row (Remains visible when next sticky card stacks at +35px) */}
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="font-['Inter:Extra_Bold'] font-inter font-extrabold text-[#074679] text-[28px] sm:text-[34px] md:text-[40px] leading-none tracking-[-0.8px]">
+                    Webify Go
+                  </h3>
+                  <div className="bg-[#074679] rounded-full size-[48px] md:size-[63.75px] flex items-center justify-center shrink-0">
                     <img
                       alt=""
-                      className="block max-w-none size-full"
-                      src={imgLayer1}
+                      src={imgIconGo}
+                      className="size-[48px] md:size-[63.75px]"
                     />
                   </div>
                 </div>
+
+                {/* Price */}
+                <div className="mt-5 md:mt-6">
+                  <p className="font-['Inter:Regular'] font-inter font-normal text-[#074679] text-[56px] sm:text-[68px] md:text-[80.8px] leading-[1.05] tracking-[-0.06em]">
+                    $300.000
+                  </p>
+                </div>
+
+                {/* Features */}
+                <div className="mt-6 md:mt-8 font-['Inter:Medium'] font-inter font-medium text-[#074679] text-[21px] sm:text-[24px] md:text-[28px] leading-[1.4] md:leading-[40px] tracking-[-0.8px] space-y-1">
+                  <p>Ideal para uñas, barberías y carta fija.</p>
+                  <p>Hasta 15 ítems.</p>
+                  <p>Pedido o cita a WhatsApp.</p>
+                  <p>Cobro con Nequi y Bre-B.</p>
+                </div>
               </div>
-            </div>
+            </article>
+
+            {/* 02 / Webify Pro — sticky top: 145px, z-index: 20 */}
+            <article
+              onClick={() => openQuoteWhatsApp("Webify Pro", "$650.000")}
+              style={{ position: "sticky", top: "145px", zIndex: 20 }}
+              className="plan-stack-card sticky top-[145px] z-[20] w-full bg-[#626cd4] text-white rounded-[36px] md:rounded-[50px] p-[28px] sm:p-[34px] min-h-[430px] md:min-h-[520px] shadow-[0_-10px_35px_rgba(44,46,42,0.14),0_20px_50px_rgba(98,108,212,0.28)] cursor-pointer transition-transform duration-300 hover:-translate-y-1 flex flex-col justify-between"
+            >
+              <div>
+                {/* Top Header Row */}
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="font-['Inter:Extra_Bold'] font-inter font-extrabold text-white text-[28px] sm:text-[34px] md:text-[40px] leading-none tracking-[-0.8px]">
+                    Webify Pro
+                  </h3>
+                  <div className="bg-white rounded-full size-[48px] md:size-[63.75px] flex items-center justify-center shrink-0">
+                    <img
+                      alt=""
+                      src={imgIconPro}
+                      className="size-[48px] md:size-[63.75px]"
+                    />
+                  </div>
+                </div>
+
+                {/* Price */}
+                <div className="mt-5 md:mt-6">
+                  <p className="font-['Inter:Regular'] font-inter font-normal text-white text-[56px] sm:text-[68px] md:text-[80.8px] leading-[1.05] tracking-[-0.06em]">
+                    $650.000
+                  </p>
+                </div>
+
+                {/* Features */}
+                <div className="mt-6 md:mt-8 font-['Inter:Medium'] font-inter font-medium text-white text-[21px] sm:text-[24px] md:text-[28px] leading-[1.4] md:leading-[40px] tracking-[-0.8px] space-y-1">
+                  <p>Panel Autogestionable desde el celular.</p>
+                  <p>Hasta 50 ítems con filtros.</p>
+                  <p>Adiciones o elección de especialistas.</p>
+                  <p>Envío calculado por barrio.</p>
+                </div>
+              </div>
+            </article>
+
+            {/* 03 / Webify Max — sticky top: 180px, z-index: 30 */}
+            <article
+              onClick={() => openQuoteWhatsApp("Webify Max", "$1.100.000")}
+              style={{ position: "sticky", top: "180px", zIndex: 30 }}
+              className="plan-stack-card sticky top-[180px] z-[30] w-full bg-[#ff705d] text-white rounded-[36px] md:rounded-[50px] p-[28px] sm:p-[34px] min-h-[430px] md:min-h-[520px] shadow-[0_-10px_35px_rgba(44,46,42,0.16),0_20px_50px_rgba(255,112,93,0.3)] cursor-pointer transition-transform duration-300 hover:-translate-y-1 flex flex-col justify-between"
+            >
+              <div>
+                {/* Top Header Row */}
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="font-['Inter:Extra_Bold'] font-inter font-extrabold text-white text-[28px] sm:text-[34px] md:text-[40px] leading-none tracking-[-0.8px]">
+                    Webify Max
+                  </h3>
+                  <div className="bg-white rounded-full size-[48px] md:size-[63.75px] flex items-center justify-center shrink-0">
+                    <img
+                      alt=""
+                      src={imgIconMax}
+                      className="size-[48px] md:size-[63.75px]"
+                    />
+                  </div>
+                </div>
+
+                {/* Price */}
+                <div className="mt-5 md:mt-6">
+                  <p className="font-['Inter:Regular'] font-inter font-normal text-white text-[56px] sm:text-[68px] md:text-[80.8px] leading-[1.05] tracking-[-0.06em]">
+                    $1.100.000
+                  </p>
+                </div>
+
+                {/* Features */}
+                <div className="mt-6 md:mt-8 font-['Inter:Medium'] font-inter font-medium text-white text-[21px] sm:text-[24px] md:text-[28px] leading-[1.4] md:leading-[40px] tracking-[-0.8px] space-y-1">
+                  <p>Todo lo de Pro + pasarela</p>
+                  <p>Wompi / Bold / MercadoPago</p>
+                  <p>(PSE, Nequi y Addi). Multi-sede,</p>
+                  <p>inventario automático y</p>
+                  <p>SEO en Google Maps.</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* =====================================================================
+          BLOCK 5: YELLOW FOOTER ("Hablemos de tu web")
+         ===================================================================== */}
+      <footer
+        id="contacto"
+        className="relative z-[20] w-full bg-[#f5e211] rounded-t-[36px] md:rounded-[50px] pt-[72px] md:pt-[136px] pb-[38px] px-5 sm:px-8 md:px-12 lg:px-[100px] xl:px-[138px] flex flex-col justify-between gap-[80px] md:gap-[180px]"
+      >
+        {/* Top Row: CTA Copy + Navigation Columns */}
+        <div className="max-w-[1642px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          {/* Left Copy & "Cotizar mi web" Button */}
+          <div className="lg:col-span-6 flex flex-col items-start gap-[26px]">
+            <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[20px] sm:text-[22px] md:text-[25px] leading-[1.5] md:leading-[40px] tracking-[-0.8px] max-w-[680px]">
+              ¿Tu negocio está en Instagram? Dale una web con identidad propia.
+              Cuéntanos qué ofreces y diseñamos tu catálogo o agenda para que
+              tus clientes elijan y te escriban a WhatsApp.
+            </p>
+
+            <button
+              type="button"
+              onClick={() => openQuoteWhatsApp()}
+              className="mindmarket-pill-btn bg-white min-h-[60px] md:min-h-[63.75px] p-[11.6px] rounded-[10px] inline-flex items-center gap-[8.5px] shadow-[0_8px_24px_rgba(44,46,42,0.08)]"
+            >
+              <span className="font-['Inter:Medium'] font-inter font-medium text-[17px] md:text-[18.1px] text-black px-[10.6px] whitespace-nowrap">
+                Cotizar mi web
+              </span>
+              <span className="pill-circle bg-[#f5e211] rounded-full size-[42.5px] flex items-center justify-center shrink-0">
+                <img
+                  alt=""
+                  src={imgArrowRight}
+                  className="pill-arrow size-[21.25px]"
+                />
+              </span>
+            </button>
+          </div>
+
+          {/* Right Navigation Lists */}
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 lg:justify-items-end">
+            <ul className="flex flex-col gap-[8px] font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[20px] md:text-[25px] leading-[1.5] md:leading-[40px] tracking-[1.5px] md:tracking-[2px]">
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("como-funciona")}
+                  className="hover:opacity-70 transition-opacity text-left"
+                >
+                  Cómo funciona
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("panel-movil")}
+                  className="hover:opacity-70 transition-opacity text-left"
+                >
+                  Panel Móvil
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("rubros")}
+                  className="hover:opacity-70 transition-opacity text-left"
+                >
+                  Rubros
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("cobros-locales")}
+                  className="hover:opacity-70 transition-opacity text-left"
+                >
+                  Cobros locales
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("planes")}
+                  className="hover:opacity-70 transition-opacity text-left"
+                >
+                  Planes
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => openQuoteWhatsApp()}
+                  className="hover:opacity-70 transition-opacity text-left"
+                >
+                  WhatsApp
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection("hero")}
+                  className="hover:opacity-70 transition-opacity text-left"
+                >
+                  Sobre Webify
+                </button>
+              </li>
+            </ul>
+
+            <ul className="flex flex-col gap-[8px] font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[20px] md:text-[25px] leading-[1.5] md:leading-[44px] tracking-[1.5px] md:tracking-[2px]">
+              <li>Contacto</li>
+              <li>Ideas para tu web</li>
+              <li>Política de privacidad</li>
+              <li>Preferencias de cookies</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Row: Giant "Hablemos de tu web" + Colombia Info + Copyright */}
+        <div className="max-w-[1642px] w-full mx-auto flex flex-col gap-[48px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+            {/* Giant Mali Headline */}
+            <div className="lg:col-span-7 mali-heading-reveal">
+              <h2 className="font-['Mali:Medium'] font-mali font-medium text-[#2c2e2a] text-[56px] sm:text-[84px] md:text-[128px] xl:text-[186.2px] leading-[1.02] md:leading-[0.98] tracking-[-0.02em]">
+                <span className="block">{renderMaliWords("Hablemos")}</span>
+                <span className="relative inline-block">
+                  {renderMaliWords("de tu web")}
+                  {/* Indigo Wavy Underline Mask */}
+                  <span
+                    aria-hidden="true"
+                    className="block h-[24px] md:h-[46px] w-[72%] max-w-[669px] bg-[#626cd4] mt-1"
+                    style={{
+                      maskImage: `url("${imgWaveIndigo}")`,
+                      WebkitMaskImage: `url("${imgWaveIndigo}")`,
+                      maskSize: "100% 100%",
+                      WebkitMaskSize: "100% 100%",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
+                    }}
+                  />
+                </span>
+              </h2>
+            </div>
+
+            {/* Colombia & Connection Copy */}
+            <div className="lg:col-span-5 flex flex-col gap-[20px] font-['Inter:Medium'] font-inter font-medium text-[19px] sm:text-[22px] md:text-[25px] leading-[1.4] md:leading-[35px]">
+              <div>
+                <p className="text-[#2c2e2a]">Colombia</p>
+                <p className="text-[#2c2e2a]/60">
+                  Diseño web para negocios locales. Estudios de uñas, spas,
+                  barberías y restaurantes.
+                </p>
+              </div>
+
+              <div>
+                <p className="text-[#2c2e2a]">Tu negocio, conectado</p>
+                <p className="text-[#2c2e2a]/60">
+                  De Instagram a tu página web. De tu catálogo o agenda al
+                  WhatsApp de tu negocio.
+                </p>
+              </div>
+
+              <p className="text-[#2c2e2a]">Webify.co</p>
+            </div>
+          </div>
+
+          <div className="pt-4 border-t border-[#2c2e2a]/10">
+            <p className="font-['Inter:Medium'] font-inter font-medium text-[#2c2e2a] text-[15px] md:text-[17px] leading-[25.5px]">
+              © 2026 Webify. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

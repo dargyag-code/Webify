@@ -1,5 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#626cd4",
+};
 
 export const metadata: Metadata = {
   title: "Webify Colombia — Catálogos con Pedido a WhatsApp y Tiendas Virtuales",
@@ -29,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="es-CO">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#626cd4" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
