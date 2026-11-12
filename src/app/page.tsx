@@ -79,8 +79,10 @@ function renderMaliWords(text: string) {
 
 export default function HomePage() {
   const rootRef = useRef<HTMLDivElement>(null);
+  const creamSectionRef = useRef<HTMLElement>(null);
   const timelineSectionRef = useRef<HTMLDivElement>(null);
   const svgDrawPathRef = useRef<SVGPathElement>(null);
+  const seamTransitionRef = useRef<HTMLDivElement>(null);
   const lenisRef = useRef<Lenis | null>(null);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -93,6 +95,17 @@ export default function HomePage() {
     window.addEventListener("resize", checkViewport);
     return () => window.removeEventListener("resize", checkViewport);
   }, []);
+
+  useEffect(() => {
+    const path = svgDrawPathRef.current;
+    if (path) {
+      const length = path.getTotalLength();
+      gsap.set(path, {
+        strokeDasharray: length,
+      });
+      ScrollTrigger.refresh();
+    }
+  }, [isMobile]);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -115,10 +128,10 @@ export default function HomePage() {
     const observers: IntersectionObserver[] = [];
 
     const ctx = gsap.context(() => {
-      // 1. SVG DRAW PATH ANIMATION ON SCROLL (MindMarket Blue S-Line)
+      // 1. SVG DRAW PATH ANIMATION ON SCROLL (Starts from under the Hero characters' feet)
       const path = svgDrawPathRef.current;
-      const timelineEl = timelineSectionRef.current;
-      if (path && timelineEl) {
+      const creamEl = creamSectionRef.current;
+      if (path && creamEl) {
         const length = path.getTotalLength();
         gsap.set(path, {
           strokeDasharray: length,
@@ -129,13 +142,33 @@ export default function HomePage() {
           strokeDashoffset: 0,
           ease: "none",
           scrollTrigger: {
-            trigger: timelineEl,
-            start: "top 68%",
+            trigger: creamEl,
+            start: "top 65%",
             end: "bottom 82%",
             scrub: 0.5,
             invalidateOnRefresh: true,
           },
         });
+      }
+
+      // 1b. Border Seam Transition: Dyes to blue (#4F52C6) as the line crosses into Section 3
+      const seamEl = seamTransitionRef.current;
+      if (seamEl && creamEl) {
+        gsap.fromTo(
+          seamEl,
+          { backgroundColor: "rgba(79, 82, 198, 0)" },
+          {
+            backgroundColor: "#4F52C6",
+            ease: "none",
+            scrollTrigger: {
+              trigger: seamEl,
+              start: "top 90%",
+              end: "bottom 70%",
+              scrub: 0.5,
+              invalidateOnRefresh: true,
+            },
+          }
+        );
       }
 
       // 2. Curtain Overlap Shading Effect on Major Sections (Zero scale: 0.96 so no side gaps ever appear)
@@ -578,7 +611,32 @@ export default function HomePage() {
       {/* =====================================================================
           BLOCK 2: CREAM SECTION + HERO CHARACTERS OVERLAP + ANIMATED BLUE S-PATH
          ===================================================================== */}
-      <section className="card-stack-block relative z-[20] w-full bg-[#f5f1e4] rounded-tl-[48px] rounded-tr-[48px] -mt-[48px] pt-[20px] md:pt-[80px] pb-[80px] md:pb-[120px] shadow-[0_-16px_40px_rgba(44,46,42,0.08)]">
+      <section
+        ref={creamSectionRef}
+        className="card-stack-block relative z-[20] w-full bg-[#f5f1e4] rounded-tl-[48px] rounded-tr-[48px] -mt-[48px] pt-[20px] md:pt-[80px] pb-0 shadow-[0_-16px_40px_rgba(44,46,42,0.08)] overflow-x-clip"
+      >
+        {/* Animated Continuous S-Shaped SVG Draw Path in #4F52C6 originating under characters' feet */}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 1920 5200"
+          preserveAspectRatio="none"
+          className="pointer-events-none absolute inset-0 w-full h-full z-[5] overflow-visible"
+        >
+          <path
+            ref={svgDrawPathRef}
+            d={
+              isMobile
+                ? "M 960 130 C 960 380, 1360 700, 1160 1150 C 940 1600, 500 1800, 640 2200 C 780 2600, 1380 2700, 1100 3150 C 820 3600, 520 3800, 720 4200 C 880 4550, 1080 4800, 960 5100 L 960 5250"
+                : "M 1340 130 C 1440 380, 1500 700, 1240 1150 C 960 1600, 420 1800, 560 2200 C 700 2600, 1460 2700, 1150 3150 C 820 3600, 480 3800, 680 4200 C 860 4550, 1140 4800, 960 5100 L 960 5250"
+            }
+            fill="none"
+            stroke="#4F52C6"
+            strokeWidth={isMobile ? "110" : "180"}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+
         {/* Central Overlapping Hero Illustration (Bridging Hero Indigo & Cream Section cleanly) */}
         <div className="hero-central-stage relative md:absolute md:-top-[330px] lg:-top-[400px] md:right-[2%] lg:right-[6%] xl:right-[10%] z-10 w-[92%] sm:w-[80%] md:w-[520px] lg:w-[680px] xl:w-[820px] mx-auto -mt-[155px] sm:-mt-[200px] md:mt-0 pointer-events-none select-none">
           {/* Background Clouds */}
@@ -635,24 +693,6 @@ export default function HomePage() {
           ref={timelineSectionRef}
           className="relative w-full overflow-x-clip pt-4 pb-[300px] md:pb-[520px] lg:pb-[640px]"
         >
-          {/* Animated Continuous S-Shaped SVG Draw Path in #4F52C6 */}
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 1920 4400"
-            preserveAspectRatio="none"
-            className="pointer-events-none absolute inset-0 w-full h-full z-[1] overflow-visible"
-          >
-            <path
-              ref={svgDrawPathRef}
-              d="M 1180 -60 C 1480 180, 1560 540, 1220 820 C 860 1120, 340 1280, 520 1720 C 700 2160, 1460 2260, 1080 2780 C 700 3300, 1520 3480, 1260 3920 C 1060 4220, 880 4320, 960 4420"
-              fill="none"
-              stroke="#4F52C6"
-              strokeWidth={isMobile ? "110" : "180"}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-
           {/* Background Decorative Dashed Traces (Desktop) */}
           <img
             alt=""
@@ -1067,6 +1107,14 @@ export default function HomePage() {
             />
           </div>
         </div>
+
+        {/* Border Seam Transition: Dyes to blue (#4F52C6) as the line crosses through into Section 3 */}
+        <div
+          ref={seamTransitionRef}
+          aria-hidden="true"
+          className="seam-blue-tint absolute bottom-0 left-0 right-0 h-[48px] z-[6] pointer-events-none transition-colors"
+          style={{ backgroundColor: "transparent" }}
+        />
       </section>
 
       {/* =====================================================================
