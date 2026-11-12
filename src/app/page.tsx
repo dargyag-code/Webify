@@ -138,38 +138,22 @@ export default function HomePage() {
         });
       }
 
-      // 2. Card Stack Scale Effect on Major Rounded Containers (scale: 0.96 as next section overlaps)
+      // 2. Curtain Overlap Shading Effect on Major Sections (Zero scale: 0.96 so no side gaps ever appear)
       const stackBlocks = gsap.utils.toArray<HTMLElement>(".card-stack-block");
       stackBlocks.forEach((block) => {
         const overlay = block.querySelector<HTMLElement>(".card-stack-overlay");
-        gsap.fromTo(
-          block,
-          { scale: 1, transformOrigin: "center bottom" },
-          {
-            scale: 0.96,
-            ease: "none",
-            scrollTrigger: {
-              trigger: block,
-              start: "bottom bottom",
-              end: "bottom top",
-              scrub: 0.65,
-              invalidateOnRefresh: true,
-            },
-          }
-        );
-
         if (overlay) {
           gsap.fromTo(
             overlay,
             { opacity: 0 },
             {
-              opacity: 0.16,
+              opacity: 0.14,
               ease: "none",
               scrollTrigger: {
                 trigger: block,
                 start: "bottom bottom",
                 end: "bottom top",
-                scrub: 0.65,
+                scrub: 0.5,
                 invalidateOnRefresh: true,
               },
             }
@@ -390,7 +374,7 @@ export default function HomePage() {
       {/* =====================================================================
           FLOATING TOP NAVIGATION BAR (Mobile Single Pill / Desktop Full Bar)
          ===================================================================== */}
-      <header className="fixed top-3 md:top-[17px] left-0 right-0 z-50 pointer-events-none">
+      <header className="fixed top-3 md:top-[17px] left-0 right-0 z-[100] pointer-events-none">
         <div className="w-[92%] md:w-[90%] max-w-[1435px] mx-auto flex items-center gap-[16px] md:gap-[20px] pointer-events-auto">
           {/* Main White Pill */}
           <nav
@@ -574,7 +558,7 @@ export default function HomePage() {
          ===================================================================== */}
       <section
         id="hero"
-        className="card-stack-block relative w-full bg-[#626cd4] pt-[128px] md:pt-[200px] lg:pt-[235px] pb-[180px] md:pb-[340px] lg:pb-[420px] px-4 md:px-10"
+        className="card-stack-block relative z-[10] w-full bg-[#626cd4] pt-[128px] md:pt-[200px] lg:pt-[235px] pb-[190px] md:pb-[350px] lg:pb-[430px] px-4 md:px-10"
       >
         <div className="card-stack-overlay absolute inset-0 bg-[#2c2e2a] opacity-0 pointer-events-none" />
 
@@ -594,7 +578,7 @@ export default function HomePage() {
       {/* =====================================================================
           BLOCK 2: CREAM SECTION + HERO CHARACTERS OVERLAP + ANIMATED BLUE S-PATH
          ===================================================================== */}
-      <section className="card-stack-block relative z-10 w-full bg-[#f5f1e4] rounded-t-[36px] md:rounded-t-[50px] -mt-[40px] md:-mt-[60px] pt-[20px] md:pt-[80px] pb-[80px] md:pb-[120px]">
+      <section className="card-stack-block relative z-[20] w-full bg-[#f5f1e4] rounded-tl-[48px] rounded-tr-[48px] -mt-[48px] pt-[20px] md:pt-[80px] pb-[80px] md:pb-[120px] shadow-[0_-16px_40px_rgba(44,46,42,0.08)]">
         {/* Central Overlapping Hero Illustration (Bridging Hero Indigo & Cream Section cleanly) */}
         <div className="hero-central-stage relative md:absolute md:-top-[330px] lg:-top-[400px] md:right-[2%] lg:right-[6%] xl:right-[10%] z-10 w-[92%] sm:w-[80%] md:w-[520px] lg:w-[680px] xl:w-[820px] mx-auto -mt-[155px] sm:-mt-[200px] md:mt-0 pointer-events-none select-none">
           {/* Background Clouds */}
@@ -1090,9 +1074,9 @@ export default function HomePage() {
          ===================================================================== */}
       <section
         id="a-tu-medida"
-        className="card-stack-block relative z-[14] w-full bg-[#626cd4] rounded-b-[36px] md:rounded-b-[50px] -mt-[24px] md:-mt-[40px] pt-[90px] md:pt-[150px] pb-[80px] md:pb-[140px] px-4 md:px-12 lg:px-[100px] overflow-x-clip"
+        className="card-stack-block relative z-[30] w-full bg-[#626cd4] -mt-[48px] pt-[90px] md:pt-[150px] pb-[128px] md:pb-[188px] px-4 md:px-12 lg:px-[100px] overflow-x-clip"
       >
-        <div className="card-stack-overlay absolute inset-0 rounded-b-[36px] md:rounded-b-[50px] bg-[#2c2e2a] opacity-0 pointer-events-none" />
+        <div className="card-stack-overlay absolute inset-0 bg-[#2c2e2a] opacity-0 pointer-events-none" />
 
         <div className="relative z-10 max-w-[1640px] mx-auto flex flex-col items-center">
           {/* Character Illustration on Left/Background */}
@@ -1158,8 +1142,9 @@ export default function HomePage() {
          ===================================================================== */}
       <section
         id="planes"
-        className="relative z-[15] w-full bg-[#f5f1e4] rounded-[36px] md:rounded-[50px] py-[80px] md:py-[136px] px-0 md:px-10 lg:px-[100px] xl:px-[138px]"
+        className="card-stack-block relative z-[40] w-full bg-[#f5f1e4] rounded-tl-[48px] rounded-tr-[48px] -mt-[48px] pt-[80px] md:pt-[136px] pb-[128px] md:pb-[184px] px-0 md:px-10 lg:px-[100px] xl:px-[138px] shadow-[0_-16px_40px_rgba(44,46,42,0.08)]"
       >
+        <div className="card-stack-overlay absolute inset-0 rounded-tl-[48px] rounded-tr-[48px] bg-[#2c2e2a] opacity-0 pointer-events-none" />
         <div className="max-w-[1642px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
           {/* Left Sticky Column: Headline + Lilac Wavy Underline + Copy */}
           <div className="w-[92%] md:w-full mx-auto lg:col-span-7 lg:sticky lg:top-[110px] flex flex-col gap-[36px] md:gap-[72px] lg:gap-[160px] self-start">
@@ -1324,7 +1309,7 @@ export default function HomePage() {
          ===================================================================== */}
       <footer
         id="contacto"
-        className="relative z-[20] w-full bg-[#f5e211] rounded-t-[36px] md:rounded-[50px] pt-[72px] md:pt-[136px] pb-[38px] px-5 sm:px-8 md:px-12 lg:px-[100px] xl:px-[138px] flex flex-col justify-between gap-[80px] md:gap-[180px]"
+        className="relative z-[50] w-full bg-[#f5e211] rounded-tl-[48px] rounded-tr-[48px] -mt-[48px] pt-[72px] md:pt-[136px] pb-[38px] px-5 sm:px-8 md:px-12 lg:px-[100px] xl:px-[138px] flex flex-col justify-between gap-[80px] md:gap-[180px] shadow-[0_-16px_40px_rgba(44,46,42,0.08)]"
       >
         {/* Top Row: CTA Copy + Navigation Columns */}
         <div className="max-w-[1642px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
