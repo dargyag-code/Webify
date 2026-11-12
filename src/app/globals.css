@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-mali: "Mali", cursive, sans-serif;
+  --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+html {
+  font-family: var(--font-inter);
+  background-color: #f5f1e4;
+  color: #2c2e2a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #f5f1e4;
+  color: #2c2e2a;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Map Figma font utility classes directly to Google Fonts Mali & Inter */
+.font-\[\'Mali\:Medium\'\] {
+  font-family: "Mali", cursive, sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.font-\[\'Mali\:Regular\'\] {
+  font-family: "Mali", cursive, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.font-\[\'Inter\:Medium\'\] {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.font-\[\'Inter\:Regular\'\] {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.font-\[\'Inter\:Extra_Bold\'\] {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 800 !important;
+}
+
+/* MindMarket Pill Button Micro-interactions */
+.mindmarket-pill-btn {
+  cursor: pointer;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+  will-change: transform;
+}
+
+.mindmarket-pill-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -8px rgba(44, 46, 42, 0.18);
+}
+
+.mindmarket-pill-btn:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.mindmarket-pill-btn .pill-circle {
+  transition: transform 0.45s var(--ease-elastic);
+  will-change: transform;
+}
+
+.mindmarket-pill-btn .pill-arrow {
+  transition: transform 0.45s var(--ease-elastic);
+  will-change: transform;
+}
+
+.mindmarket-pill-btn:hover .pill-circle {
+  transform: scale(1.14);
+}
+
+.mindmarket-pill-btn:hover .pill-arrow {
+  transform: translateX(3px) rotate(-45deg);
+}
+
+/* Nav link pill hover effect matching MindMarket */
+.mindmarket-nav-item {
+  cursor: pointer;
+}
+
+.mindmarket-nav-item .nav-pill-bg {
+  transition: opacity 0.28s var(--ease-out), transform 0.28s var(--ease-out);
+  transform: scale(0.92);
+}
+
+.mindmarket-nav-item:hover .nav-pill-bg {
+  opacity: 1 !important;
+  transform: scale(1);
+}
+
+.mindmarket-nav-item .nav-chevron {
+  transition: transform 0.28s var(--ease-out);
+}
+
+.mindmarket-nav-item:hover .nav-chevron {
+  transform: rotate(180deg);
+}
